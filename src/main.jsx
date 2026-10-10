@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client';
 import './styles.css';
 import demoData from './data/journey_demo_data.json';
 import {LANGUAGES, t, fmtDuration, legLabel} from './i18n.js';
+import {Chatbot} from './components/Chatbot.jsx';
 
 /** Lazy-loaded stop name translations — populated once on first non-English render. */
 let stopNamesCache = null;
@@ -202,13 +203,12 @@ function App(){
   const [lang,setLang]=useState(()=>localStorage.getItem('oj_lang')||'en');
   const T=(key,...args)=>t(lang,key,...args);
   const [status,setStatus]=useState('');
-  const [prompt,setPrompt]=useState('');
-  const [insight,setInsight]=useState('');
   const [gps,setGps]=useState(null);
   const [error,setError]=useState('');
   const [activeChip,setActiveChip]=useState(null);
   const [loading,setLoading]=useState(false);
   const [stopNamesMap,setStopNamesMap]=useState(null);
+  const [isChatOpen,setIsChatOpen]=useState(false);
 
   // Persist language choice and lazy-load stop name translations when needed
   useEffect(()=>{
@@ -262,26 +262,14 @@ function App(){
     ['Ahmedabad Airport','GIFT City']
   ];
 
-  const interpret=()=>{
-    const n=norm(prompt);
-    let dest='GIFT City',p='fast';
-    for(const x of router?.places||[])if(n.includes(norm(x[0])))dest=x[0];
-    if(/less walk|little walk|minimum walking/.test(n))p='walk';
-    if(/fewest|minimum transfers/.test(n))p='transfer';
-    const tm=prompt.match(/before\s+(\d{1,2})(?::(\d{2}))?/);
-    setTo(dest);
-    setPref(p);
-    const prefLabel=p==='walk'?T('insightPrefWalk'):p==='transfer'?T('insightPrefTransfer'):T('insightPrefFast');
-    setInsight(
-      <><b>{T('insightTitle')}</b><br/>
-      {T('insightDest')}: {dest}<br/>
-      {T('insightPref')}: {prefLabel}
-      {tm
-        ?<><br/>{T('insightArrival')}: {tm[1]}{tm[2]?':'+tm[2]:''}</>
-        :<><br/>{T('insightNoTime')}</>
-      }<br/><br/>
-      <span>{T('insightNote')}</span></>
-    );
+  const handleApplyRoute = ({ from: f, to: t, pref: p }) => {
+    if (f) setFrom(f);
+    if (t) setTo(t);
+    if (p) setPref(p);
+    setActiveChip(null);
+    if (f && t) {
+      run(f, t, p || pref);
+    }
   };
 
   return (
@@ -341,15 +329,13 @@ function App(){
         </section>
 
         <aside>
-          <div className="assistant">
+          <div className="assistant assistant-sidebar-card">
             <div className="assistant-kicker">{T('aiKicker')}</div>
             <h3>{T('aiTitle')}</h3>
             <p>{T('aiDesc')}</p>
-            <div className="ai-row">
-              <input value={prompt} onChange={e=>setPrompt(e.target.value)} onKeyDown={e=>e.key==='Enter'&&interpret()} placeholder={T('aiPlaceholder')}/>
-              <button onClick={interpret}>{T('aiInterpret')}</button>
-            </div>
-            {insight&&<div className="insight">{insight}</div>}
+            <button className="primary open-pip-chat-btn" onClick={()=>setIsChatOpen(true)}>
+              <span>💬</span> {T('chatOpenInPip')} →
+            </button>
           </div>
 
           <div className="stats">
@@ -367,6 +353,9 @@ function App(){
       </div>
 
       <footer>{T('footer')}</footer>
+
+      {/* Picture-in-Picture Floating Chatbot */}
+      <Chatbot lang={lang} onApplyRoute={handleApplyRoute} isOpen={isChatOpen} setIsOpen={setIsChatOpen} />
     </main>
   );
 }
