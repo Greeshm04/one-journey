@@ -26,7 +26,7 @@ A multimodal transit planner for **Ahmedabad and Gandhinagar** covering Metro, A
 |---|---|
 | Frontend | React 18, Vite 6 |
 | Map | Leaflet 1.9 |
-| AI Backend | Node.js (ESM), IBM watsonx.ai / Granite |
+| AI Backend | Node.js (ESM), IBM watsonx.ai |
 | Styling | Plain CSS (custom properties) |
 | Build | Vite (`npm run build`) |
 
