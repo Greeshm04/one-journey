@@ -1,7 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { t } from '../i18n.js';
 
-export function Chatbot({ lang, onApplyRoute, isOpen, setIsOpen }) {
+// Stable module-level reference — never changes across renders
+const SpeechRecognitionAPI =
+  typeof window !== 'undefined'
+    ? window.SpeechRecognition || window.webkitSpeechRecognition || null
+    : null;
+
+export function Chatbot({ lang, isOpen, setIsOpen }) {
   const T = (key, ...args) => t(lang, key, ...args);
 
   const [internalOpen, setInternalOpen] = useState(true);
@@ -14,8 +20,91 @@ export function Chatbot({ lang, onApplyRoute, isOpen, setIsOpen }) {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ configured: false, provider: 'local', model: '' });
   const [hasUnread, setHasUnread] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const [voiceError, setVoiceError] = useState('');
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
+  const recognitionRef = useRef(null);
+
+  const voiceSupported = Boolean(SpeechRecognitionAPI);
+
+  // Use a ref for lang so the recognition callbacks always read the latest value
+  // without needing to be recreated on every render.
+  const langRef = useRef(lang);
+  useEffect(() => { langRef.current = lang; }, [lang]);
+
+  // Clear any voice error when the user starts typing
+  useEffect(() => { if (input) setVoiceError(''); }, [input]);
+
+  const startRecognition = useCallback((langCode, isFallback = false) => {
+    const recognition = new SpeechRecognitionAPI();
+    recognition.lang = langCode;
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.continuous = false;
+
+    recognition.onstart = () => {
+      setIsListening(true);
+      setVoiceError('');
+    };
+
+    recognition.onresult = (e) => {
+      const transcript = e.results[0][0].transcript;
+      setInput(transcript);
+      recognitionRef.current = null;
+      setIsListening(false);
+      setTimeout(() => sendMessage(transcript), 400);
+    };
+
+    recognition.onerror = (e) => {
+      recognitionRef.current = null;
+      setIsListening(false);
+
+      if (e.error === 'language-not-supported' && !isFallback) {
+        // Gujarati/Hindi locale not supported by this browser — retry with en-IN
+        startRecognition('en-IN', true);
+        return;
+      }
+      if (e.error === 'not-allowed' || e.error === 'permission-denied') {
+        setVoiceError(
+          langRef.current === 'gu' ? 'માઇક્રોફોન ઍક્સેસ આપો' :
+          langRef.current === 'hi' ? 'माइक्रोफ़ोन अनुमति दें' :
+          'Mic access denied — allow it in browser settings'
+        );
+        return;
+      }
+      if (e.error === 'no-speech') {
+        setVoiceError(
+          langRef.current === 'gu' ? 'કોઈ અવાજ ન સંભળાયો' :
+          langRef.current === 'hi' ? 'कोई बोली नहीं सुनी' :
+          'No speech heard — try again'
+        );
+        return;
+      }
+    };
+
+    recognition.onend = () => {
+      recognitionRef.current = null;
+      setIsListening(false);
+    };
+
+    recognitionRef.current = recognition;
+    recognition.start();
+  }, []);
+
+  const startVoice = useCallback(() => {
+    if (!SpeechRecognitionAPI || recognitionRef.current) return;
+    setVoiceError('');
+    const langCode = langRef.current === 'gu' ? 'gu-IN'
+      : langRef.current === 'hi' ? 'hi-IN'
+      : 'en-IN';
+    startRecognition(langCode);
+  }, [startRecognition]);
+
+  const stopVoice = useCallback(() => {
+    recognitionRef.current?.stop();
+    // onend will clean up recognitionRef and isListening
+  }, []);
 
   // Initialize or update initial greeting when language changes (if conversation hasn't started)
   useEffect(() => {
@@ -271,24 +360,6 @@ export function Chatbot({ lang, onApplyRoute, isOpen, setIsOpen }) {
                     <FormattedText text={m.content} />
                   </div>
 
-                  {/* Route action card */}
-                  {m.routeAction && (
-                    <div className="route-action-card">
-                      <div className="route-action-info">
-                        <span className="route-action-badge">{T('chatSuggestedRoute')}</span>
-                        <div className="route-action-names">
-                          <strong>{m.routeAction.from}</strong> → <strong>{m.routeAction.to}</strong>
-                        </div>
-                      </div>
-                      <button
-                        className="route-action-btn"
-                        onClick={() => onApplyRoute && onApplyRoute(m.routeAction)}
-                      >
-                        {T('chatApplyRoute')} <span>→</span>
-                      </button>
-                    </div>
-                  )}
-
                   <span className="chat-time">{m.timestamp}</span>
                 </div>
               </div>
@@ -328,14 +399,43 @@ export function Chatbot({ lang, onApplyRoute, isOpen, setIsOpen }) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder={T('aiPlaceholder')}
-              disabled={loading}
+              placeholder={
+                isListening ? T('voiceListening') :
+                voiceError   ? voiceError :
+                T('aiPlaceholder')
+              }
+              disabled={loading || isListening}
               aria-label={T('aiPlaceholder')}
+              className={voiceError ? 'voice-error-input' : ''}
             />
+            {voiceSupported && (
+              <button
+                className={`chat-mic-btn ${isListening ? 'listening' : ''}`}
+                onClick={isListening ? stopVoice : startVoice}
+                disabled={loading}
+                title={isListening ? T('voiceListening') : T('voiceMic')}
+                aria-label={isListening ? T('voiceListening') : T('voiceMic')}
+              >
+                {isListening ? (
+                  /* Animated stop / recording indicator */
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke="none">
+                    <rect x="6" y="6" width="12" height="12" rx="2"/>
+                  </svg>
+                ) : (
+                  /* Mic icon */
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="9" y="2" width="6" height="12" rx="3"/>
+                    <path d="M5 10a7 7 0 0 0 14 0"/>
+                    <line x1="12" y1="19" x2="12" y2="23"/>
+                    <line x1="8" y1="23" x2="16" y2="23"/>
+                  </svg>
+                )}
+              </button>
+            )}
             <button
               className="chat-send-btn"
               onClick={() => sendMessage()}
-              disabled={loading || !input.trim()}
+              disabled={loading || !input.trim() || isListening}
               title={T('chatSendBtn')}
             >
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

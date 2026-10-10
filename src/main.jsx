@@ -4,6 +4,9 @@ import './styles.css';
 import demoData from './data/journey_demo_data.json';
 import {LANGUAGES, t, fmtDuration, legLabel} from './i18n.js';
 import {Chatbot} from './components/Chatbot.jsx';
+import {LocationInput} from './components/LocationInput.jsx';
+import {RouteMap} from './components/RouteMap.jsx';
+import {CURATED_LANDMARKS} from './services/geocoding.js';
 
 /** Lazy-loaded stop name translations — populated once on first non-English render. */
 let stopNamesCache = null;
@@ -90,14 +93,34 @@ function createRouter(raw){
   const data=normalizeData(raw);
   const N=data.nodes||[];
   const E=data.edges||[];
-  const places=data.places||PLACE_FALLBACK;
+  const places=[...(data.places||PLACE_FALLBACK), ...CURATED_LANDMARKS.map(l=>[l.name, l.lat, l.lon])];
   const byId=Object.fromEntries(N.map(n=>[n.id,n]));
+
   function resolve(input,gps){
+    if(!input) return null;
+    // Direct object support with latitude/longitude
+    if(typeof input==='object'&&Number.isFinite(input.lat)&&Number.isFinite(input.lon)){
+      return {
+        name: input.name || 'Selected Location',
+        lat: input.lat,
+        lon: input.lon,
+        node: input.node || (input.isStation ? N.find(n=>n.id===input.id) : null)
+      };
+    }
+
     const raw=String(input||'').trim();
     if(raw==='My current location'&&gps)return {name:raw,...gps};
     const q=norm(raw); if(!q)return null;
+
+    // 1. Exact transit node match
     const exactNode=N.find(n=>norm(n.name)===q || norm(n.name.replace(/\s+(metro\s+)?station$/i,''))===q);
     if(exactNode)return {name:exactNode.name,lat:exactNode.lat,lon:exactNode.lon,node:exactNode};
+
+    // 2. Curated landmarks lookup
+    const landmark=CURATED_LANDMARKS.find(l=>norm(l.name)===q || norm(l.fullName).includes(q));
+    if(landmark) return {name:landmark.name, lat:landmark.lat, lon:landmark.lon};
+
+    // 3. Fuzzy match across nodes and fallback places
     let best=null,bs=0;
     for(const n of N){
       const nn=norm(n.name);
@@ -111,11 +134,14 @@ function createRouter(raw){
     }
     return best;
   }
-  function nearestCandidates(pt,maxDist=4,limit=10){
+
+  function nearestCandidates(pt,maxDist=5.5,limit=12){
+    if(!pt||pt.lat==null||pt.lon==null) return [];
     return N.map(n=>({node:n,dist:(n.lat==null||n.lon==null)?Infinity:hav(pt,n)}))
       .filter(x=>Number.isFinite(x.dist)&&x.dist<=maxDist)
       .sort((x,y)=>x.dist-y.dist).slice(0,limit);
   }
+
   function findRoutes(fromQ,toQ,pref,gps){
     const a=resolve(fromQ,gps),b=resolve(toQ,gps);if(!a||!b)return [];
     const sources=a.node?[{node:a.node,dist:0}]:nearestCandidates(a);
@@ -125,11 +151,13 @@ function createRouter(raw){
     const adj=Object.fromEntries(N.map(n=>[n.id,[]]));
     for(const e of E)if(adj[e[0]])adj[e[0]].push(e);
     const results=[];
+
     for(const source of sources){
       const s=source.node,initial=source.dist*WALK_SPEED;
       const dist=new Map(),prev=new Map(),pq=[[initial,s.id,null]];
       dist.set(s.id+'|',initial);
       let bestGoal=null;
+
       while(pq.length){
         pq.sort((x,y)=>x[0]-y[0]);
         const [cost,u,lastRoute]=pq.shift();
@@ -147,22 +175,107 @@ function createRouter(raw){
         }
       }
       if(!bestGoal)continue;
+
       let key=bestGoal.key,legs=[];
       while(prev.has(key)){const [pk,e]=prev.get(key);legs.push(e);key=pk}
       legs.reverse();
-      const walkScore=initial+bestGoal.access+legs.filter(e=>e[3]==='walk').reduce((sum,e)=>sum+e[2],0);
-      const walkDisplay=legs.filter(e=>e[3]==='walk').reduce((sum,e)=>sum+e[2],0);
+
       let grouped=[];
+
+      // First-mile walk leg if origin is not a direct station node
+      if(source.dist>0.05 && a.name !== byId[s.id]?.name){
+        const firstMins=Math.max(1,Math.round(initial));
+        const fromCoords = (a.lat != null && a.lon != null) ? { lat: a.lat, lon: a.lon } : null;
+        const toCoords = (s.lat != null && s.lon != null) ? { lat: s.lat, lon: s.lon } : null;
+        const path = (fromCoords && toCoords) ? [[fromCoords.lat, fromCoords.lon], [toCoords.lat, toCoords.lon]] : [];
+        grouped.push({
+          type:'walk',
+          typeKey:'walk',
+          route:'walk',
+          mins:firstMins,
+          from:a.name,
+          to:byId[s.id]?.name||s.id,
+          fromCoords,
+          toCoords,
+          path,
+          isFirstMile:true,
+          distKm:source.dist
+        });
+      }
+
       for(const e of legs){
         const type=e[3],typeKey=type==='metro'?'metro':type==='walk'?'walk':(e[4]==='AJL'?'brts':e[4]==='GTSL'?'gtsl':'amts'),route=e[5];
         const last=grouped.at(-1);
-        if(last&&last.type===type&&last.route===route){last.mins+=e[2];last.to=byId[e[1]]?.name||e[1]}
-        else grouped.push({type,typeKey,route,mins:e[2],from:byId[e[0]]?.name||e[0],to:byId[e[1]]?.name||e[1]});
+        const fromNode = byId[e[0]] || { name: e[0] };
+        const toNode = byId[e[1]] || { name: e[1] };
+
+        if(last&&last.type===type&&last.route===route&&!last.isFirstMile){
+          last.mins+=e[2];
+          last.to=toNode.name||e[1];
+          if(toNode.lat != null && toNode.lon != null){
+            last.toCoords = { lat: toNode.lat, lon: toNode.lon };
+            last.path.push([toNode.lat, toNode.lon]);
+          }
+        } else {
+          const fromCoords = (fromNode.lat != null && fromNode.lon != null) ? { lat: fromNode.lat, lon: fromNode.lon } : null;
+          const toCoords = (toNode.lat != null && toNode.lon != null) ? { lat: toNode.lat, lon: toNode.lon } : null;
+          const path = [];
+          if(fromCoords) path.push([fromCoords.lat, fromCoords.lon]);
+          if(toCoords) path.push([toCoords.lat, toCoords.lon]);
+
+          grouped.push({
+            type,
+            typeKey,
+            route,
+            mins:e[2],
+            from:fromNode.name||e[0],
+            to:toNode.name||e[1],
+            fromCoords,
+            toCoords,
+            path
+          });
+        }
       }
+
+      // Last-mile walk leg if destination is not a direct station node
+      if(bestGoal.access>0.05*WALK_SPEED && b.name !== (byId[bestGoal.u]?.name||bestGoal.u)){
+        const lastMins=Math.max(1,Math.round(bestGoal.access));
+        const uNode = byId[bestGoal.u] || { name: bestGoal.u };
+        const fromCoords = (uNode.lat != null && uNode.lon != null) ? { lat: uNode.lat, lon: uNode.lon } : null;
+        const toCoords = (b.lat != null && b.lon != null) ? { lat: b.lat, lon: b.lon } : null;
+        const path = (fromCoords && toCoords) ? [[fromCoords.lat, fromCoords.lon], [toCoords.lat, toCoords.lon]] : [];
+        grouped.push({
+          type:'walk',
+          typeKey:'walk',
+          route:'walk',
+          mins:lastMins,
+          from:uNode.name||bestGoal.u,
+          to:b.name,
+          fromCoords,
+          toCoords,
+          path,
+          isLastMile:true,
+          distKm:bestGoal.access/WALK_SPEED
+        });
+      }
+
+      const walkScore=initial+bestGoal.access+legs.filter(e=>e[3]==='walk').reduce((sum,e)=>sum+e[2],0);
+      const walkDisplay=Math.round(initial+bestGoal.access+legs.filter(e=>e[3]==='walk').reduce((sum,e)=>sum+e[2],0));
       const transfers=Math.max(0,grouped.filter(x=>x.type!=='walk').length-1);
       const score=bestGoal.total+(pref==='walk'?walkScore*1.8:pref==='transfer'?transfers*8:pref==='cheap'?transfers*3:0);
-      results.push({score,total:Math.round(bestGoal.total),walk:Math.round(walkDisplay),transfers,legs:grouped,source:s.id});
+
+      results.push({
+        score,
+        total:Math.round(bestGoal.total),
+        walk:walkDisplay,
+        transfers,
+        legs:grouped,
+        source:s.id,
+        originPoint:a,
+        destPoint:b
+      });
     }
+
     results.sort((x,y)=>x.score-y.score);
     const unique=[],seen=new Set();
     for(const r of results){
@@ -171,7 +284,7 @@ function createRouter(raw){
         ? transitLegs.map(l=>`${l.type}:${l.route}:${l.from}>${l.to}`).join('|')
         : r.legs.map(l=>`${l.type}:${l.route}:${l.from}>${l.to}`).join('|');
       if(!seen.has(sig)){seen.add(sig);unique.push(r)}
-      if(unique.length===3)break
+      if(unique.length===3)break;
     }
     return unique;
   }
@@ -200,6 +313,7 @@ function App(){
   const [to,setTo]=useState('');
   const [pref,setPref]=useState('fast');
   const [results,setResults]=useState([]);
+  const [activeRouteIndex,setActiveRouteIndex]=useState(0);
   const [lang,setLang]=useState(()=>localStorage.getItem('oj_lang')||'en');
   const T=(key,...args)=>t(lang,key,...args);
   const [status,setStatus]=useState('');
@@ -242,6 +356,7 @@ function App(){
     setTimeout(()=>{
       const r=router.findRoutes(f,t_,p,gps);
       setResults(r);
+      setActiveRouteIndex(0);
       setStatus(T('statusOptions',r.length));
       setLoading(false);
     },0);
@@ -262,26 +377,14 @@ function App(){
     ['Ahmedabad Airport','GIFT City']
   ];
 
-  const handleApplyRoute = ({ from: f, to: t, pref: p }) => {
-    if (f) setFrom(f);
-    if (t) setTo(t);
-    if (p) setPref(p);
-    setActiveChip(null);
-    if (f && t) {
-      run(f, t, p || pref);
-    }
-  };
-
   return (
     <main className="app">
       <header className="hero">
         <div>
-          <div className="eyebrow">{T('eyebrow')}</div>
           <h1>{T('heroTitle1')}<br/><em>{T('heroTitle2')}</em></h1>
           <p>{T('heroDesc')}</p>
         </div>
         <div className="hero-right">
-          <div className="live-badge"><i></i>{T('offlineBadge')}</div>
           <LanguageSwitcher lang={lang} setLang={setLang}/>
         </div>
       </header>
@@ -290,8 +393,30 @@ function App(){
 
       <section className="search-card">
         <div className="search-grid">
-          <Field label={T('fieldFrom')} value={from} onChange={v=>{setFrom(v);setActiveChip(null)}} placeholder={T('placeholderFrom')} action={gpsClick} gpsBtnLabel={T('gpsBtnLabel')}/>
-          <Field label={T('fieldTo')} value={to} onChange={v=>{setTo(v);setActiveChip(null)}} placeholder={T('placeholderTo')}/>
+          <LocationInput
+            id="from-location"
+            label={T('fieldFrom')}
+            value={from}
+            onChange={v=>{setFrom(v);setActiveChip(null)}}
+            onSelect={item=>{setFrom(item);setActiveChip(null)}}
+            placeholder={T('placeholderFrom')}
+            onGpsClick={gpsClick}
+            gpsBtnLabel={T('gpsBtnLabel')}
+            nodes={router?.N||[]}
+            gps={gps}
+            lang={lang}
+          />
+          <LocationInput
+            id="to-location"
+            label={T('fieldTo')}
+            value={to}
+            onChange={v=>{setTo(v);setActiveChip(null)}}
+            onSelect={item=>{setTo(item);setActiveChip(null)}}
+            placeholder={T('placeholderTo')}
+            nodes={router?.N||[]}
+            gps={gps}
+            lang={lang}
+          />
           <button className="primary search-button" onClick={()=>run()}>{T('findJourney')} <span>{T('findJourneyArrow')}</span></button>
         </div>
         <div className="chips">
@@ -301,13 +426,6 @@ function App(){
             </button>
           ))}
         </div>
-        <div className="preferences">
-          <span>{T('optimizeFor')}</span>
-          {[['fast','prefFast'],['walk','prefWalk'],['transfer','prefTransfer'],['cheap','prefCheap']].map(([v,k])=>(
-            <button className={pref===v?'selected':''} key={v} onClick={()=>{setPref(v);if(from&&to)run(from,to,v)}}>{T(k)}</button>
-          ))}
-          <small>{T('fareNote')}</small>
-        </div>
       </section>
 
       <div className="content">
@@ -316,6 +434,15 @@ function App(){
             <h2>{T('sectionJourneys')}</h2>
             <span>{loading?T('calculating'):status||T('statusDefault')}</span>
           </div>
+          {/* Interactive Leaflet Route Map */}
+          <RouteMap
+            route={results[activeRouteIndex] || results[0] || null}
+            allNodes={router?.N || []}
+            gps={gps}
+            lang={lang}
+            stopMap={stopNamesMap}
+          />
+
           {loading
             ?<div className="calculating"><div className="calc-bar"><div className="calc-fill"/></div><span>{T('findingRoutes')}</span></div>
             :!results.length
@@ -324,7 +451,17 @@ function App(){
                 <b>{T('emptyTitle')}</b>
                 <p>{T('emptyDesc')}</p>
               </div>
-              :results.map((r,i)=><RouteCard key={i} route={r} best={i===0} lang={lang} stopMap={stopNamesMap}/>)
+              :results.map((r,i)=>(
+                <RouteCard
+                  key={i}
+                  route={r}
+                  best={i===0}
+                  isSelected={activeRouteIndex === i}
+                  onSelect={()=>setActiveRouteIndex(i)}
+                  lang={lang}
+                  stopMap={stopNamesMap}
+                />
+              ))
           }
         </section>
 
@@ -355,7 +492,7 @@ function App(){
       <footer>{T('footer')}</footer>
 
       {/* Picture-in-Picture Floating Chatbot */}
-      <Chatbot lang={lang} onApplyRoute={handleApplyRoute} isOpen={isChatOpen} setIsOpen={setIsChatOpen} />
+      <Chatbot lang={lang} isOpen={isChatOpen} setIsOpen={setIsChatOpen} />
     </main>
   );
 }
@@ -372,14 +509,17 @@ function Field({label,value,onChange,placeholder,action,gpsBtnLabel}){
   );
 }
 
-function RouteCard({route,best,lang,stopMap}){
+function RouteCard({route,best,isSelected,onSelect,lang,stopMap}){
   const T=(key,...args)=>t(lang,key,...args);
   const SN=(name)=>stopName(stopMap,lang,name);
   return (
-    <article className={'route '+(best?'best':'')}>
+    <article className={`route ${best?'best':''} ${isSelected?'selected-route':''}`} onClick={onSelect}>
       <div className="route-top">
         <div>
-          <span className="route-badge">{best?T('badgeBest'):T('badgeAlt')}</span>
+          <div className="route-badge-row">
+            <span className="route-badge">{best?T('badgeBest'):T('badgeAlt')}</span>
+            {isSelected && <span className="active-map-badge">🗺️ {T('viewOnMap')}</span>}
+          </div>
           <div className="route-time">{fmtDuration(lang,route.total)}</div>
           <div className="route-meta">
             {route.transfers} {route.transfers===1?T('transfers'):T('transfersPlural')} · ~{route.walk} {T('walkingMin')} · {T('scheduleBased')}
@@ -390,7 +530,11 @@ function RouteCard({route,best,lang,stopMap}){
       <div className="legs">
         {route.legs.map((l,i)=>(
           <div className={`leg ${l.type}`} key={i}>
-            <div className="leg-title">{legLabel(lang,l.typeKey)}{l.route&&l.typeKey!=='metro'&&<small> · {l.route}</small>}</div>
+            <div className="leg-title">
+              {l.isFirstMile ? T('walkToTransit') : l.isLastMile ? T('walkFromTransit') : legLabel(lang,l.typeKey)}
+              {l.route && l.typeKey!=='metro' && l.typeKey!=='walk' && <small> · {l.route}</small>}
+              {l.distKm != null && <small> (~{l.distKm < 1 ? `${Math.round(l.distKm * 1000)}m` : `${l.distKm.toFixed(1)}km`})</small>}
+            </div>
             <div className="leg-line">{SN(l.from)}</div>
             <div className="leg-time">↓ {fmtDuration(lang,l.mins)}</div>
             <div className="leg-line">{SN(l.to)}</div>
