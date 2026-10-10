@@ -1,0 +1,3207 @@
+{
+  "A.E.C Zonal Office": {
+    "en": "A.E.C Zonal Office",
+    "gu": "A.E.C Zonal Office",
+    "hi": "A.E.C Zonal Office"
+  },
+  "AEC": {
+    "en": "AEC",
+    "gu": "AEC",
+    "hi": "AEC"
+  },
+  "APMC": {
+    "en": "APMC",
+    "gu": "APMC",
+    "hi": "APMC"
+  },
+  "APMC Market": {
+    "en": "APMC Market",
+    "gu": "APMC Market",
+    "hi": "APMC Market"
+  },
+  "Aashapuri Nagar": {
+    "en": "Aashapuri Nagar",
+    "gu": "Aashapuri Nagar",
+    "hi": "Aashapuri Nagar"
+  },
+  "Abhaynagar Society": {
+    "en": "Abhaynagar Society",
+    "gu": "Abhaynagar Society",
+    "hi": "Abhaynagar Society"
+  },
+  "Abu-Koba Cross Road": {
+    "en": "Abu-Koba Cross Road",
+    "gu": "Abu-Koba Cross Road",
+    "hi": "Abu-Koba Cross Road"
+  },
+  "Acher Depo": {
+    "en": "Acher Depo",
+    "gu": "Acher Depo",
+    "hi": "Acher Depo"
+  },
+  "Adalaj-Gandhinagar Cross Road": {
+    "en": "Adalaj-Gandhinagar Cross Road",
+    "gu": "Adalaj-Gandhinagar Cross Road",
+    "hi": "Adalaj-Gandhinagar Cross Road"
+  },
+  "Adam Sahebni Dargah": {
+    "en": "Adam Sahebni Dargah",
+    "gu": "Adam Sahebni Dargah",
+    "hi": "Adam Sahebni Dargah"
+  },
+  "Adarsh Vidyavihar (Jawahar Chowk)": {
+    "en": "Adarsh Vidyavihar (Jawahar Chowk)",
+    "gu": "Adarsh Vidyavihar (Jawahar Chowk)",
+    "hi": "Adarsh Vidyavihar (Jawahar Chowk)"
+  },
+  "Adeshnagar (Naranpura Poice Station)": {
+    "en": "Adeshnagar (Naranpura Poice Station)",
+    "gu": "Adeshnagar (Naranpura Poice Station)",
+    "hi": "Adeshnagar (Naranpura Poice Station)"
+  },
+  "Ahmedabad Domestic Airport": {
+    "en": "Ahmedabad Domestic Airport",
+    "gu": "Ahmedabad Domestic Airport",
+    "hi": "Ahmedabad Domestic Airport"
+  },
+  "Ahmedabad Gramya Jilla Nyayalay": {
+    "en": "Ahmedabad Gramya Jilla Nyayalay",
+    "gu": "Ahmedabad Gramya Jilla Nyayalay",
+    "hi": "Ahmedabad Gramya Jilla Nyayalay"
+  },
+  "Airport Circle": {
+    "en": "Airport Circle",
+    "gu": "Airport Circle",
+    "hi": "Airport Circle"
+  },
+  "Aiyappa Mandir (Khodiyarnagar)": {
+    "en": "Aiyappa Mandir (Khodiyarnagar)",
+    "gu": "Aiyappa Mandir (Khodiyarnagar)",
+    "hi": "Aiyappa Mandir (Khodiyarnagar)"
+  },
+  "Ajanta Ellora Apartments": {
+    "en": "Ajanta Ellora Apartments",
+    "gu": "Ajanta Ellora Apartments",
+    "hi": "Ajanta Ellora Apartments"
+  },
+  "Ajay Tenaments": {
+    "en": "Ajay Tenaments",
+    "gu": "Ajay Tenaments",
+    "hi": "Ajay Tenaments"
+  },
+  "Akashdarshan Society": {
+    "en": "Akashdarshan Society",
+    "gu": "Akashdarshan Society",
+    "hi": "Akashdarshan Society"
+  },
+  "Akhbarnagar": {
+    "en": "Akhbarnagar",
+    "gu": "Akhbarnagar",
+    "hi": "Akhbarnagar"
+  },
+  "Akshardham": {
+    "en": "Akshardham",
+    "gu": "Akshardham",
+    "hi": "Akshardham"
+  },
+  "Akshardham Mandir (Gandhinagar)": {
+    "en": "Akshardham Mandir (Gandhinagar)",
+    "gu": "Akshardham Mandir (Gandhinagar)",
+    "hi": "Akshardham Mandir (Gandhinagar)"
+  },
+  "Alka Park": {
+    "en": "Alka Park",
+    "gu": "Alka Park",
+    "hi": "Alka Park"
+  },
+  "Alok Tenaments": {
+    "en": "Alok Tenaments",
+    "gu": "Alok Tenaments",
+    "hi": "Alok Tenaments"
+  },
+  "Amaraiwadi Post Office": {
+    "en": "Amaraiwadi Post Office",
+    "gu": "Amaraiwadi Post Office",
+    "hi": "Amaraiwadi Post Office"
+  },
+  "Amikunj Society": {
+    "en": "Amikunj Society",
+    "gu": "Amikunj Society",
+    "hi": "Amikunj Society"
+  },
+  "Amizara Society": {
+    "en": "Amizara Society",
+    "gu": "Amizara Society",
+    "hi": "Amizara Society"
+  },
+  "Amraivadi": {
+    "en": "Amraivadi",
+    "gu": "Amraivadi",
+    "hi": "Amraivadi"
+  },
+  "Amraiwadi": {
+    "en": "Amraiwadi",
+    "gu": "Amraiwadi",
+    "hi": "Amraiwadi"
+  },
+  "Anaj Bazar": {
+    "en": "Anaj Bazar",
+    "gu": "Anaj Bazar",
+    "hi": "Anaj Bazar"
+  },
+  "Anand Flats": {
+    "en": "Anand Flats",
+    "gu": "Anand Flats",
+    "hi": "Anand Flats"
+  },
+  "Anant Society": {
+    "en": "Anant Society",
+    "gu": "Anant Society",
+    "hi": "Anant Society"
+  },
+  "Anjali Vidyalay": {
+    "en": "Anjali Vidyalay",
+    "gu": "Anjali Vidyalay",
+    "hi": "Anjali Vidyalay"
+  },
+  "Ankur Society": {
+    "en": "Ankur Society",
+    "gu": "Ankur Society",
+    "hi": "Ankur Society"
+  },
+  "Antriskh (Bopal)": {
+    "en": "Antriskh (Bopal)",
+    "gu": "Antriskh (Bopal)",
+    "hi": "Antriskh (Bopal)"
+  },
+  "Apna Bazar": {
+    "en": "Apna Bazar",
+    "gu": "Apna Bazar",
+    "hi": "Apna Bazar"
+  },
+  "Apparel Park": {
+    "en": "Apparel Park",
+    "gu": "Apparel Park",
+    "hi": "Apparel Park"
+  },
+  "Apparel Park (Ambika Mills)": {
+    "en": "Apparel Park (Ambika Mills)",
+    "gu": "Apparel Park (Ambika Mills)",
+    "hi": "Apparel Park (Ambika Mills)"
+  },
+  "Apparel Park Metro Station (New Cotton Mills)": {
+    "en": "Apparel Park Metro Station (New Cotton Mills)",
+    "gu": "Apparel Park Metro Station (New Cotton Mills)",
+    "hi": "Apparel Park Metro Station (New Cotton Mills)"
+  },
+  "Arbuda Mills": {
+    "en": "Arbuda Mills",
+    "gu": "Arbuda Mills",
+    "hi": "Arbuda Mills"
+  },
+  "Arbudanagar": {
+    "en": "Arbudanagar",
+    "gu": "Arbudanagar",
+    "hi": "Arbudanagar"
+  },
+  "Arvind Sales Emporium": {
+    "en": "Arvind Sales Emporium",
+    "gu": "Arvind Sales Emporium",
+    "hi": "Arvind Sales Emporium"
+  },
+  "Asarva Railway Station": {
+    "en": "Asarva Railway Station",
+    "gu": "Asarva Railway Station",
+    "hi": "Asarva Railway Station"
+  },
+  "Ashima Group": {
+    "en": "Ashima Group",
+    "gu": "Ashima Group",
+    "hi": "Ashima Group"
+  },
+  "Ashwamegh Society (Nagarvel)": {
+    "en": "Ashwamegh Society (Nagarvel)",
+    "gu": "Ashwamegh Society (Nagarvel)",
+    "hi": "Ashwamegh Society (Nagarvel)"
+  },
+  "Ayna Complex": {
+    "en": "Ayna Complex",
+    "gu": "Ayna Complex",
+    "hi": "Ayna Complex"
+  },
+  "Ayojannagar": {
+    "en": "Ayojannagar",
+    "gu": "Ayojannagar",
+    "hi": "Ayojannagar"
+  },
+  "B.J.Park": {
+    "en": "B.J.Park",
+    "gu": "B.J.Park",
+    "hi": "B.J.Park"
+  },
+  "Bala Hanuman(Khadiya)": {
+    "en": "Bala Hanuman(Khadiya)",
+    "gu": "Bala Hanuman(Khadiya)",
+    "hi": "Bala Hanuman(Khadiya)"
+  },
+  "Baladevnagar": {
+    "en": "Baladevnagar",
+    "gu": "Baladevnagar",
+    "hi": "Baladevnagar"
+  },
+  "Bapasitaram Chowk": {
+    "en": "Bapasitaram Chowk",
+    "gu": "Bapasitaram Chowk",
+    "hi": "Bapasitaram Chowk"
+  },
+  "Bhadrakali Mandir": {
+    "en": "Bhadrakali Mandir",
+    "gu": "Bhadrakali Mandir",
+    "hi": "Bhadrakali Mandir"
+  },
+  "Bhagwat Bungalowz (South Bopal)": {
+    "en": "Bhagwat Bungalowz (South Bopal)",
+    "gu": "Bhagwat Bungalowz (South Bopal)",
+    "hi": "Bhagwat Bungalowz (South Bopal)"
+  },
+  "Bhagyoday Society (Sukhramnagar)": {
+    "en": "Bhagyoday Society (Sukhramnagar)",
+    "gu": "Bhagyoday Society (Sukhramnagar)",
+    "hi": "Bhagyoday Society (Sukhramnagar)"
+  },
+  "Bhaikakanagar": {
+    "en": "Bhaikakanagar",
+    "gu": "Bhaikakanagar",
+    "hi": "Bhaikakanagar"
+  },
+  "Bhalakiya Mills": {
+    "en": "Bhalakiya Mills",
+    "gu": "Bhalakiya Mills",
+    "hi": "Bhalakiya Mills"
+  },
+  "Bhata Gam": {
+    "en": "Bhata Gam",
+    "gu": "Bhata Gam",
+    "hi": "Bhata Gam"
+  },
+  "Bhaththa (Vasna)": {
+    "en": "Bhaththa (Vasna)",
+    "gu": "Bhaththa (Vasna)",
+    "hi": "Bhaththa (Vasna)"
+  },
+  "Bhavans College": {
+    "en": "Bhavans College",
+    "gu": "Bhavans College",
+    "hi": "Bhavans College"
+  },
+  "Bhavin Vidyalay": {
+    "en": "Bhavin Vidyalay",
+    "gu": "Bhavin Vidyalay",
+    "hi": "Bhavin Vidyalay"
+  },
+  "Bhavsar Hostel": {
+    "en": "Bhavsar Hostel",
+    "gu": "Bhavsar Hostel",
+    "hi": "Bhavsar Hostel"
+  },
+  "Bhimjipura": {
+    "en": "Bhimjipura",
+    "gu": "Bhimjipura",
+    "hi": "Bhimjipura"
+  },
+  "Bihari Mills": {
+    "en": "Bihari Mills",
+    "gu": "Bihari Mills",
+    "hi": "Bihari Mills"
+  },
+  "Bodakdev Gam": {
+    "en": "Bodakdev Gam",
+    "gu": "Bodakdev Gam",
+    "hi": "Bodakdev Gam"
+  },
+  "Bodakdev Sarkari Vasahat": {
+    "en": "Bodakdev Sarkari Vasahat",
+    "gu": "Bodakdev Sarkari Vasahat",
+    "hi": "Bodakdev Sarkari Vasahat"
+  },
+  "Bombay Housing": {
+    "en": "Bombay Housing",
+    "gu": "Bombay Housing",
+    "hi": "Bombay Housing"
+  },
+  "Bombay Housing Police Line": {
+    "en": "Bombay Housing Police Line",
+    "gu": "Bombay Housing Police Line",
+    "hi": "Bombay Housing Police Line"
+  },
+  "Bopal": {
+    "en": "Bopal",
+    "gu": "Bopal",
+    "hi": "Bopal"
+  },
+  "Bopal Approach": {
+    "en": "Bopal Approach",
+    "gu": "Bopal Approach",
+    "hi": "Bopal Approach"
+  },
+  "Bopal Gam": {
+    "en": "Bopal Gam",
+    "gu": "Bopal Gam",
+    "hi": "Bopal Gam"
+  },
+  "Bopal-444": {
+    "en": "Bopal-444",
+    "gu": "Bopal-444",
+    "hi": "Bopal-444"
+  },
+  "Bopal-Sanand Cross Road": {
+    "en": "Bopal-Sanand Cross Road",
+    "gu": "Bopal-Sanand Cross Road",
+    "hi": "Bopal-Sanand Cross Road"
+  },
+  "Brahmaninagar": {
+    "en": "Brahmaninagar",
+    "gu": "Brahmaninagar",
+    "hi": "Brahmaninagar"
+  },
+  "Broad Guage Railway Station": {
+    "en": "Broad Guage Railway Station",
+    "gu": "Broad Guage Railway Station",
+    "hi": "Broad Guage Railway Station"
+  },
+  "Bunglow": {
+    "en": "Bunglow",
+    "gu": "Bunglow",
+    "hi": "Bunglow"
+  },
+  "Cama Hotel Crossroad": {
+    "en": "Cama Hotel Crossroad",
+    "gu": "Cama Hotel Crossroad",
+    "hi": "Cama Hotel Crossroad"
+  },
+  "Chaitanya Society": {
+    "en": "Chaitanya Society",
+    "gu": "Chaitanya Society",
+    "hi": "Chaitanya Society"
+  },
+  "Chakradhari Society": {
+    "en": "Chakradhari Society",
+    "gu": "Chakradhari Society",
+    "hi": "Chakradhari Society"
+  },
+  "Chakudiya Mahadev": {
+    "en": "Chakudiya Mahadev",
+    "gu": "Chakudiya Mahadev",
+    "hi": "Chakudiya Mahadev"
+  },
+  "Champaner Society": {
+    "en": "Champaner Society",
+    "gu": "Champaner Society",
+    "hi": "Champaner Society"
+  },
+  "Chandrabhaga Raw House": {
+    "en": "Chandrabhaga Raw House",
+    "gu": "Chandrabhaga Raw House",
+    "hi": "Chandrabhaga Raw House"
+  },
+  "Chandralok Society": {
+    "en": "Chandralok Society",
+    "gu": "Chandralok Society",
+    "hi": "Chandralok Society"
+  },
+  "Chartoda Kbrstan Char Rasta": {
+    "en": "Chartoda Kbrstan Char Rasta",
+    "gu": "Chartoda Kbrstan Char Rasta",
+    "hi": "Chartoda Kbrstan Char Rasta"
+  },
+  "Chhinkaniwala Estate": {
+    "en": "Chhinkaniwala Estate",
+    "gu": "Chhinkaniwala Estate",
+    "hi": "Chhinkaniwala Estate"
+  },
+  "Chintamani Society": {
+    "en": "Chintamani Society",
+    "gu": "Chintamani Society",
+    "hi": "Chintamani Society"
+  },
+  "Church": {
+    "en": "Church",
+    "gu": "Church",
+    "hi": "Church"
+  },
+  "Collector Office": {
+    "en": "Collector Office",
+    "gu": "Collector Office",
+    "hi": "Collector Office"
+  },
+  "Commerce College": {
+    "en": "Commerce College",
+    "gu": "Commerce College",
+    "hi": "Commerce College"
+  },
+  "Commerce College Hostel": {
+    "en": "Commerce College Hostel",
+    "gu": "Commerce College Hostel",
+    "hi": "Commerce College Hostel"
+  },
+  "Commerce Six Road": {
+    "en": "Commerce Six Road",
+    "gu": "Commerce Six Road",
+    "hi": "Commerce Six Road"
+  },
+  "Congress Bhavan": {
+    "en": "Congress Bhavan",
+    "gu": "Congress Bhavan",
+    "hi": "Congress Bhavan"
+  },
+  "D.P.S. Railway Fatak": {
+    "en": "D.P.S. Railway Fatak",
+    "gu": "D.P.S. Railway Fatak",
+    "hi": "D.P.S. Railway Fatak"
+  },
+  "D.P.S. School": {
+    "en": "D.P.S. School",
+    "gu": "D.P.S. School",
+    "hi": "D.P.S. School"
+  },
+  "Dada Sahebna Pagala": {
+    "en": "Dada Sahebna Pagala",
+    "gu": "Dada Sahebna Pagala",
+    "hi": "Dada Sahebna Pagala"
+  },
+  "Dariyapur Tower": {
+    "en": "Dariyapur Tower",
+    "gu": "Dariyapur Tower",
+    "hi": "Dariyapur Tower"
+  },
+  "Darpan Six Roads": {
+    "en": "Darpan Six Roads",
+    "gu": "Darpan Six Roads",
+    "hi": "Darpan Six Roads"
+  },
+  "Delhi Chakla": {
+    "en": "Delhi Chakla",
+    "gu": "Delhi Chakla",
+    "hi": "Delhi Chakla"
+  },
+  "Delhi Darwaja": {
+    "en": "Delhi Darwaja",
+    "gu": "Delhi Darwaja",
+    "hi": "Delhi Darwaja"
+  },
+  "Delhi Darwaja (Rt.105 Stand)": {
+    "en": "Delhi Darwaja (Rt.105 Stand)",
+    "gu": "Delhi Darwaja (Rt.105 Stand)",
+    "hi": "Delhi Darwaja (Rt.105 Stand)"
+  },
+  "Delhi Darwaja (Rt.77 Stand)": {
+    "en": "Delhi Darwaja (Rt.77 Stand)",
+    "gu": "Delhi Darwaja (Rt.77 Stand)",
+    "hi": "Delhi Darwaja (Rt.77 Stand)"
+  },
+  "Devendra Society": {
+    "en": "Devendra Society",
+    "gu": "Devendra Society",
+    "hi": "Devendra Society"
+  },
+  "Dhana Sutharni Pol": {
+    "en": "Dhana Sutharni Pol",
+    "gu": "Dhana Sutharni Pol",
+    "hi": "Dhana Sutharni Pol"
+  },
+  "Dharmnagar": {
+    "en": "Dharmnagar",
+    "gu": "Dharmnagar",
+    "hi": "Dharmnagar"
+  },
+  "Dharnidhar Derasar": {
+    "en": "Dharnidhar Derasar",
+    "gu": "Dharnidhar Derasar",
+    "hi": "Dharnidhar Derasar"
+  },
+  "Dharnidhar Society": {
+    "en": "Dharnidhar Society",
+    "gu": "Dharnidhar Society",
+    "hi": "Dharnidhar Society"
+  },
+  "Dharti Status": {
+    "en": "Dharti Status",
+    "gu": "Dharti Status",
+    "hi": "Dharti Status"
+  },
+  "Dholakuva Circle": {
+    "en": "Dholakuva Circle",
+    "gu": "Dholakuva Circle",
+    "hi": "Dholakuva Circle"
+  },
+  "Dholinagar Railway Crossing": {
+    "en": "Dholinagar Railway Crossing",
+    "gu": "Dholinagar Railway Crossing",
+    "hi": "Dholinagar Railway Crossing"
+  },
+  "Dinbai Tower": {
+    "en": "Dinbai Tower",
+    "gu": "Dinbai Tower",
+    "hi": "Dinbai Tower"
+  },
+  "Doordarshan Kendra": {
+    "en": "Doordarshan Kendra",
+    "gu": "Doordarshan Kendra",
+    "hi": "Doordarshan Kendra"
+  },
+  "Dordarshan Kendra(Anjani Mandir)": {
+    "en": "Dordarshan Kendra(Anjani Mandir)",
+    "gu": "Dordarshan Kendra(Anjani Mandir)",
+    "hi": "Dordarshan Kendra(Anjani Mandir)"
+  },
+  "Dr. Ambedkar Chock (Shahpur Darwaja)": {
+    "en": "Dr. Ambedkar Chock (Shahpur Darwaja)",
+    "gu": "Dr. Ambedkar Chock (Shahpur Darwaja)",
+    "hi": "Dr. Ambedkar Chock (Shahpur Darwaja)"
+  },
+  "Dr.Ambedkar Hall (Saraspur)": {
+    "en": "Dr.Ambedkar Hall (Saraspur)",
+    "gu": "Dr.Ambedkar Hall (Saraspur)",
+    "hi": "Dr.Ambedkar Hall (Saraspur)"
+  },
+  "Dr.Ambedkar Rashtriya Foundation": {
+    "en": "Dr.Ambedkar Rashtriya Foundation",
+    "gu": "Dr.Ambedkar Rashtriya Foundation",
+    "hi": "Dr.Ambedkar Rashtriya Foundation"
+  },
+  "Dr.House (Parimal Crossing)": {
+    "en": "Dr.House (Parimal Crossing)",
+    "gu": "Dr.House (Parimal Crossing)",
+    "hi": "Dr.House (Parimal Crossing)"
+  },
+  "Dr.Jivraj Mehta Hospital": {
+    "en": "Dr.Jivraj Mehta Hospital",
+    "gu": "Dr.Jivraj Mehta Hospital",
+    "hi": "Dr.Jivraj Mehta Hospital"
+  },
+  "Dr.Shyamaprasad Overbridge": {
+    "en": "Dr.Shyamaprasad Overbridge",
+    "gu": "Dr.Shyamaprasad Overbridge",
+    "hi": "Dr.Shyamaprasad Overbridge"
+  },
+  "Drive In Cinema": {
+    "en": "Drive In Cinema",
+    "gu": "Drive In Cinema",
+    "hi": "Drive In Cinema"
+  },
+  "Dudhnath Mahadev": {
+    "en": "Dudhnath Mahadev",
+    "gu": "Dudhnath Mahadev",
+    "hi": "Dudhnath Mahadev"
+  },
+  "F.D.High School": {
+    "en": "F.D.High School",
+    "gu": "F.D.High School",
+    "hi": "F.D.High School"
+  },
+  "Fatasa Ni Pol": {
+    "en": "Fatasa Ni Pol",
+    "gu": "Fatasa Ni Pol",
+    "hi": "Fatasa Ni Pol"
+  },
+  "Flower Park(Hariharanand Ashram)": {
+    "en": "Flower Park(Hariharanand Ashram)",
+    "gu": "Flower Park(Hariharanand Ashram)",
+    "hi": "Flower Park(Hariharanand Ashram)"
+  },
+  "Fuwara": {
+    "en": "Fuwara",
+    "gu": "Fuwara",
+    "hi": "Fuwara"
+  },
+  "G.M.D.C. Ground": {
+    "en": "G.M.D.C. Ground",
+    "gu": "G.M.D.C. Ground",
+    "hi": "G.M.D.C. Ground"
+  },
+  "GIFT City": {
+    "en": "GIFT City",
+    "gu": "GIFT City",
+    "hi": "GIFT City"
+  },
+  "GNLU": {
+    "en": "GNLU",
+    "gu": "GNLU",
+    "hi": "GNLU"
+  },
+  "Galaxy Corel": {
+    "en": "Galaxy Corel",
+    "gu": "Galaxy Corel",
+    "hi": "Galaxy Corel"
+  },
+  "Gandhi Ashram": {
+    "en": "Gandhi Ashram",
+    "gu": "Gandhi Ashram",
+    "hi": "Gandhi Ashram"
+  },
+  "Gandhi Ashram Crossroad": {
+    "en": "Gandhi Ashram Crossroad",
+    "gu": "Gandhi Ashram Crossroad",
+    "hi": "Gandhi Ashram Crossroad"
+  },
+  "Gandhibag (Acher)": {
+    "en": "Gandhibag (Acher)",
+    "gu": "Gandhibag (Acher)",
+    "hi": "Gandhibag (Acher)"
+  },
+  "Gandhigram": {
+    "en": "Gandhigram",
+    "gu": "Gandhigram",
+    "hi": "Gandhigram"
+  },
+  "Gandhigram (Metro Station)": {
+    "en": "Gandhigram (Metro Station)",
+    "gu": "Gandhigram (Metro Station)",
+    "hi": "Gandhigram (Metro Station)"
+  },
+  "Gandhigram Railway Station": {
+    "en": "Gandhigram Railway Station",
+    "gu": "Gandhigram Railway Station",
+    "hi": "Gandhigram Railway Station"
+  },
+  "Gandhinagar Kelvani Mandal": {
+    "en": "Gandhinagar Kelvani Mandal",
+    "gu": "Gandhinagar Kelvani Mandal",
+    "hi": "Gandhinagar Kelvani Mandal"
+  },
+  "Gandhinagar University": {
+    "en": "Gandhinagar University",
+    "gu": "Gandhinagar University",
+    "hi": "Gandhinagar University"
+  },
+  "Ganesh Corporate House": {
+    "en": "Ganesh Corporate House",
+    "gu": "Ganesh Corporate House",
+    "hi": "Ganesh Corporate House"
+  },
+  "Gautamnagar (Naranpura Railway Crossing)": {
+    "en": "Gautamnagar (Naranpura Railway Crossing)",
+    "gu": "Gautamnagar (Naranpura Railway Crossing)",
+    "hi": "Gautamnagar (Naranpura Railway Crossing)"
+  },
+  "Geratpur Railway Station": {
+    "en": "Geratpur Railway Station",
+    "gu": "Geratpur Railway Station",
+    "hi": "Geratpur Railway Station"
+  },
+  "Ghanshyam Engg. Works": {
+    "en": "Ghanshyam Engg. Works",
+    "gu": "Ghanshyam Engg. Works",
+    "hi": "Ghanshyam Engg. Works"
+  },
+  "Ghanshyam Rubber works": {
+    "en": "Ghanshyam Rubber works",
+    "gu": "Ghanshyam Rubber works",
+    "hi": "Ghanshyam Rubber works"
+  },
+  "Ghanti": {
+    "en": "Ghanti",
+    "gu": "Ghanti",
+    "hi": "Ghanti"
+  },
+  "Gheekanta": {
+    "en": "Gheekanta",
+    "gu": "Gheekanta",
+    "hi": "Gheekanta"
+  },
+  "Gift City Road": {
+    "en": "Gift City Road",
+    "gu": "Gift City Road",
+    "hi": "Gift City Road"
+  },
+  "Gnanada Society": {
+    "en": "Gnanada Society",
+    "gu": "Gnanada Society",
+    "hi": "Gnanada Society"
+  },
+  "Gokul Complex": {
+    "en": "Gokul Complex",
+    "gu": "Gokul Complex",
+    "hi": "Gokul Complex"
+  },
+  "Gol Limda (Sardard Bhavan)": {
+    "en": "Gol Limda (Sardard Bhavan)",
+    "gu": "Gol Limda (Sardard Bhavan)",
+    "hi": "Gol Limda (Sardard Bhavan)"
+  },
+  "Gomtipur Darwaja": {
+    "en": "Gomtipur Darwaja",
+    "gu": "Gomtipur Darwaja",
+    "hi": "Gomtipur Darwaja"
+  },
+  "Govardhan Park": {
+    "en": "Govardhan Park",
+    "gu": "Govardhan Park",
+    "hi": "Govardhan Park"
+  },
+  "Govardhan party plot": {
+    "en": "Govardhan party plot",
+    "gu": "Govardhan party plot",
+    "hi": "Govardhan party plot"
+  },
+  "Government Quarters (Gomtipur)": {
+    "en": "Government Quarters (Gomtipur)",
+    "gu": "Government Quarters (Gomtipur)",
+    "hi": "Government Quarters (Gomtipur)"
+  },
+  "Gram Panchayat Office": {
+    "en": "Gram Panchayat Office",
+    "gu": "Gram Panchayat Office",
+    "hi": "Gram Panchayat Office"
+  },
+  "Gravity House": {
+    "en": "Gravity House",
+    "gu": "Gravity House",
+    "hi": "Gravity House"
+  },
+  "Gujarat Botteling": {
+    "en": "Gujarat Botteling",
+    "gu": "Gujarat Botteling",
+    "hi": "Gujarat Botteling"
+  },
+  "Gujarat College": {
+    "en": "Gujarat College",
+    "gu": "Gujarat College",
+    "hi": "Gujarat College"
+  },
+  "Gujarat University": {
+    "en": "Gujarat University",
+    "gu": "Gujarat University",
+    "hi": "Gujarat University"
+  },
+  "Gujarat Vidyapith": {
+    "en": "Gujarat Vidyapith",
+    "gu": "Gujarat Vidyapith",
+    "hi": "Gujarat Vidyapith"
+  },
+  "Guptanagar": {
+    "en": "Guptanagar",
+    "gu": "Guptanagar",
+    "hi": "Guptanagar"
+  },
+  "Guru Govind Dham": {
+    "en": "Guru Govind Dham",
+    "gu": "Guru Govind Dham",
+    "hi": "Guru Govind Dham"
+  },
+  "Gurudwara": {
+    "en": "Gurudwara",
+    "gu": "Gurudwara",
+    "hi": "Gurudwara"
+  },
+  "Gurukul": {
+    "en": "Gurukul",
+    "gu": "Gurukul",
+    "hi": "Gurukul"
+  },
+  "Gurukul Road": {
+    "en": "Gurukul Road",
+    "gu": "Gurukul Road",
+    "hi": "Gurukul Road"
+  },
+  "Gyanada Society": {
+    "en": "Gyanada Society",
+    "gu": "Gyanada Society",
+    "hi": "Gyanada Society"
+  },
+  "Haja Patelni Pol": {
+    "en": "Haja Patelni Pol",
+    "gu": "Haja Patelni Pol",
+    "hi": "Haja Patelni Pol"
+  },
+  "Halimni Khadki": {
+    "en": "Halimni Khadki",
+    "gu": "Halimni Khadki",
+    "hi": "Halimni Khadki"
+  },
+  "Hanumanpura": {
+    "en": "Hanumanpura",
+    "gu": "Hanumanpura",
+    "hi": "Hanumanpura"
+  },
+  "Harbholenath Park": {
+    "en": "Harbholenath Park",
+    "gu": "Harbholenath Park",
+    "hi": "Harbholenath Park"
+  },
+  "Hariom Apartment": {
+    "en": "Hariom Apartment",
+    "gu": "Hariom Apartment",
+    "hi": "Hariom Apartment"
+  },
+  "Harishchandra Park": {
+    "en": "Harishchandra Park",
+    "gu": "Harishchandra Park",
+    "hi": "Harishchandra Park"
+  },
+  "Hasmukh Colony": {
+    "en": "Hasmukh Colony",
+    "gu": "Hasmukh Colony",
+    "hi": "Hasmukh Colony"
+  },
+  "Hathi Khai": {
+    "en": "Hathi Khai",
+    "gu": "Hathi Khai",
+    "hi": "Hathi Khai"
+  },
+  "Hathisingni Wadi": {
+    "en": "Hathisingni Wadi",
+    "gu": "Hathisingni Wadi",
+    "hi": "Hathisingni Wadi"
+  },
+  "Hatkeshwar Mahadev": {
+    "en": "Hatkeshwar Mahadev",
+    "gu": "Hatkeshwar Mahadev",
+    "hi": "Hatkeshwar Mahadev"
+  },
+  "Heritage Park": {
+    "en": "Heritage Park",
+    "gu": "Heritage Park",
+    "hi": "Heritage Park"
+  },
+  "Himanshu Vidyalay": {
+    "en": "Himanshu Vidyalay",
+    "gu": "Himanshu Vidyalay",
+    "hi": "Himanshu Vidyalay"
+  },
+  "Hira Prabhu Farm": {
+    "en": "Hira Prabhu Farm",
+    "gu": "Hira Prabhu Farm",
+    "hi": "Hira Prabhu Farm"
+  },
+  "Hirabhai Market": {
+    "en": "Hirabhai Market",
+    "gu": "Hirabhai Market",
+    "hi": "Hirabhai Market"
+  },
+  "Hiralal ni Chali": {
+    "en": "Hiralal ni Chali",
+    "gu": "Hiralal ni Chali",
+    "hi": "Hiralal ni Chali"
+  },
+  "Hope Nuro Care Hospital": {
+    "en": "Hope Nuro Care Hospital",
+    "gu": "Hope Nuro Care Hospital",
+    "hi": "Hope Nuro Care Hospital"
+  },
+  "Hotel Sarthi": {
+    "en": "Hotel Sarthi",
+    "gu": "Hotel Sarthi",
+    "hi": "Hotel Sarthi"
+  },
+  "I.T.I. Railway Underbridge": {
+    "en": "I.T.I. Railway Underbridge",
+    "gu": "I.T.I. Railway Underbridge",
+    "hi": "I.T.I. Railway Underbridge"
+  },
+  "ISKCON Cross Road": {
+    "en": "ISKCON Cross Road",
+    "gu": "ISKCON Cross Road",
+    "hi": "ISKCON Cross Road"
+  },
+  "ISKCON Mandir": {
+    "en": "ISKCON Mandir",
+    "gu": "ISKCON Mandir",
+    "hi": "ISKCON Mandir"
+  },
+  "Income Tax Office": {
+    "en": "Income Tax Office",
+    "gu": "Income Tax Office",
+    "hi": "Income Tax Office"
+  },
+  "Indiranagar": {
+    "en": "Indiranagar",
+    "gu": "Indiranagar",
+    "hi": "Indiranagar"
+  },
+  "Indiranagar (Naranmitha ni chali)": {
+    "en": "Indiranagar (Naranmitha ni chali)",
+    "gu": "Indiranagar (Naranmitha ni chali)",
+    "hi": "Indiranagar (Naranmitha ni chali)"
+  },
+  "Indraprasth Tower": {
+    "en": "Indraprasth Tower",
+    "gu": "Indraprasth Tower",
+    "hi": "Indraprasth Tower"
+  },
+  "Infocity": {
+    "en": "Infocity",
+    "gu": "Infocity",
+    "hi": "Infocity"
+  },
+  "Infocity (Gh-0)": {
+    "en": "Infocity (Gh-0)",
+    "gu": "Infocity (Gh-0)",
+    "hi": "Infocity (Gh-0)"
+  },
+  "Infocity Club Resort": {
+    "en": "Infocity Club Resort",
+    "gu": "Infocity Club Resort",
+    "hi": "Infocity Club Resort"
+  },
+  "Ishwar Bhuvan": {
+    "en": "Ishwar Bhuvan",
+    "gu": "Ishwar Bhuvan",
+    "hi": "Ishwar Bhuvan"
+  },
+  "Jain Milan Society": {
+    "en": "Jain Milan Society",
+    "gu": "Jain Milan Society",
+    "hi": "Jain Milan Society"
+  },
+  "Jain Upashray (Hira Panna Flats)": {
+    "en": "Jain Upashray (Hira Panna Flats)",
+    "gu": "Jain Upashray (Hira Panna Flats)",
+    "hi": "Jain Upashray (Hira Panna Flats)"
+  },
+  "Jainnagar": {
+    "en": "Jainnagar",
+    "gu": "Jainnagar",
+    "hi": "Jainnagar"
+  },
+  "Jaltarang Society": {
+    "en": "Jaltarang Society",
+    "gu": "Jaltarang Society",
+    "hi": "Jaltarang Society"
+  },
+  "Jansatta Karyalay": {
+    "en": "Jansatta Karyalay",
+    "gu": "Jansatta Karyalay",
+    "hi": "Jansatta Karyalay"
+  },
+  "Jawahar Chowk (Maninagar)": {
+    "en": "Jawahar Chowk (Maninagar)",
+    "gu": "Jawahar Chowk (Maninagar)",
+    "hi": "Jawahar Chowk (Maninagar)"
+  },
+  "Jawahar Chowk (Sabarmati)": {
+    "en": "Jawahar Chowk (Sabarmati)",
+    "gu": "Jawahar Chowk (Sabarmati)",
+    "hi": "Jawahar Chowk (Sabarmati)"
+  },
+  "Jawahar School": {
+    "en": "Jawahar School",
+    "gu": "Jawahar School",
+    "hi": "Jawahar School"
+  },
+  "Jhulta Minara": {
+    "en": "Jhulta Minara",
+    "gu": "Jhulta Minara",
+    "hi": "Jhulta Minara"
+  },
+  "Jivandip Circle": {
+    "en": "Jivandip Circle",
+    "gu": "Jivandip Circle",
+    "hi": "Jivandip Circle"
+  },
+  "Jivraj Park": {
+    "en": "Jivraj Park",
+    "gu": "Jivraj Park",
+    "hi": "Jivraj Park"
+  },
+  "Jivraj Park (Rt.40/1 Stand)": {
+    "en": "Jivraj Park (Rt.40/1 Stand)",
+    "gu": "Jivraj Park (Rt.40/1 Stand)",
+    "hi": "Jivraj Park (Rt.40/1 Stand)"
+  },
+  "Jivram Bhatt ni Chali": {
+    "en": "Jivram Bhatt ni Chali",
+    "gu": "Jivram Bhatt ni Chali",
+    "hi": "Jivram Bhatt ni Chali"
+  },
+  "Jogeshwar Estate": {
+    "en": "Jogeshwar Estate",
+    "gu": "Jogeshwar Estate",
+    "hi": "Jogeshwar Estate"
+  },
+  "Jogeshwari Society": {
+    "en": "Jogeshwari Society",
+    "gu": "Jogeshwari Society",
+    "hi": "Jogeshwari Society"
+  },
+  "Juhapura Road": {
+    "en": "Juhapura Road",
+    "gu": "Juhapura Road",
+    "hi": "Juhapura Road"
+  },
+  "Julta Minara": {
+    "en": "Julta Minara",
+    "gu": "Julta Minara",
+    "hi": "Julta Minara"
+  },
+  "Juna Koba": {
+    "en": "Juna Koba",
+    "gu": "Juna Koba",
+    "hi": "Juna Koba"
+  },
+  "Juna Sachivalaya": {
+    "en": "Juna Sachivalaya",
+    "gu": "Juna Sachivalaya",
+    "hi": "Juna Sachivalaya"
+  },
+  "Juna Vadaj": {
+    "en": "Juna Vadaj",
+    "gu": "Juna Vadaj",
+    "hi": "Juna Vadaj"
+  },
+  "Juna Vadaj BRTS": {
+    "en": "Juna Vadaj BRTS",
+    "gu": "Juna Vadaj BRTS",
+    "hi": "Juna Vadaj BRTS"
+  },
+  "K.K. Shastri College": {
+    "en": "K.K. Shastri College",
+    "gu": "K.K. Shastri College",
+    "hi": "K.K. Shastri College"
+  },
+  "Kabir Chowk": {
+    "en": "Kabir Chowk",
+    "gu": "Kabir Chowk",
+    "hi": "Kabir Chowk"
+  },
+  "Kadiya Naka": {
+    "en": "Kadiya Naka",
+    "gu": "Kadiya Naka",
+    "hi": "Kadiya Naka"
+  },
+  "Kailadevi Dham (Power House)": {
+    "en": "Kailadevi Dham (Power House)",
+    "gu": "Kailadevi Dham (Power House)",
+    "hi": "Kailadevi Dham (Power House)"
+  },
+  "Kailas Colony": {
+    "en": "Kailas Colony",
+    "gu": "Kailas Colony",
+    "hi": "Kailas Colony"
+  },
+  "Kailasnagar": {
+    "en": "Kailasnagar",
+    "gu": "Kailasnagar",
+    "hi": "Kailasnagar"
+  },
+  "Kaivalya Dham (Radio Mirchi)": {
+    "en": "Kaivalya Dham (Radio Mirchi)",
+    "gu": "Kaivalya Dham (Radio Mirchi)",
+    "hi": "Kaivalya Dham (Radio Mirchi)"
+  },
+  "Kalpataru Residency": {
+    "en": "Kalpataru Residency",
+    "gu": "Kalpataru Residency",
+    "hi": "Kalpataru Residency"
+  },
+  "Kalptaru Apartment (Shrirang Apartment)": {
+    "en": "Kalptaru Apartment (Shrirang Apartment)",
+    "gu": "Kalptaru Apartment (Shrirang Apartment)",
+    "hi": "Kalptaru Apartment (Shrirang Apartment)"
+  },
+  "Kalupur": {
+    "en": "Kalupur",
+    "gu": "Kalupur",
+    "hi": "Kalupur"
+  },
+  "Kalupur Chokha Bazar": {
+    "en": "Kalupur Chokha Bazar",
+    "gu": "Kalupur Chokha Bazar",
+    "hi": "Kalupur Chokha Bazar"
+  },
+  "Kalupur Ghee Bazar": {
+    "en": "Kalupur Ghee Bazar",
+    "gu": "Kalupur Ghee Bazar",
+    "hi": "Kalupur Ghee Bazar"
+  },
+  "Kalupur Metro Station": {
+    "en": "Kalupur Metro Station",
+    "gu": "Kalupur Metro Station",
+    "hi": "Kalupur Metro Station"
+  },
+  "Kalupur Overbridge": {
+    "en": "Kalupur Overbridge",
+    "gu": "Kalupur Overbridge",
+    "hi": "Kalupur Overbridge"
+  },
+  "Kalupur Terminus": {
+    "en": "Kalupur Terminus",
+    "gu": "Kalupur Terminus",
+    "hi": "Kalupur Terminus"
+  },
+  "Kamdar Medan": {
+    "en": "Kamdar Medan",
+    "gu": "Kamdar Medan",
+    "hi": "Kamdar Medan"
+  },
+  "Kamdar Medan Char Rasta": {
+    "en": "Kamdar Medan Char Rasta",
+    "gu": "Kamdar Medan Char Rasta",
+    "hi": "Kamdar Medan Char Rasta"
+  },
+  "Kameshwar Twins": {
+    "en": "Kameshwar Twins",
+    "gu": "Kameshwar Twins",
+    "hi": "Kameshwar Twins"
+  },
+  "Kameshwar Twins Bunglows": {
+    "en": "Kameshwar Twins Bunglows",
+    "gu": "Kameshwar Twins Bunglows",
+    "hi": "Kameshwar Twins Bunglows"
+  },
+  "Kamnath Mahadev": {
+    "en": "Kamnath Mahadev",
+    "gu": "Kamnath Mahadev",
+    "hi": "Kamnath Mahadev"
+  },
+  "Kankaria East": {
+    "en": "Kankaria East",
+    "gu": "Kankaria East",
+    "hi": "Kankaria East"
+  },
+  "Karnamukteshwar Mahadev": {
+    "en": "Karnamukteshwar Mahadev",
+    "gu": "Karnamukteshwar Mahadev",
+    "hi": "Karnamukteshwar Mahadev"
+  },
+  "Karnavati Bunglows (Narayan Chowk)": {
+    "en": "Karnavati Bunglows (Narayan Chowk)",
+    "gu": "Karnavati Bunglows (Narayan Chowk)",
+    "hi": "Karnavati Bunglows (Narayan Chowk)"
+  },
+  "Keshariyajinagar Society": {
+    "en": "Keshariyajinagar Society",
+    "gu": "Keshariyajinagar Society",
+    "hi": "Keshariyajinagar Society"
+  },
+  "Khadiya Char Rasta": {
+    "en": "Khadiya Char Rasta",
+    "gu": "Khadiya Char Rasta",
+    "hi": "Khadiya Char Rasta"
+  },
+  "Khamasa": {
+    "en": "Khamasa",
+    "gu": "Khamasa",
+    "hi": "Khamasa"
+  },
+  "Khanpur": {
+    "en": "Khanpur",
+    "gu": "Khanpur",
+    "hi": "Khanpur"
+  },
+  "Khanpur Darwaja Crossroad": {
+    "en": "Khanpur Darwaja Crossroad",
+    "gu": "Khanpur Darwaja Crossroad",
+    "hi": "Khanpur Darwaja Crossroad"
+  },
+  "Khodiyar Nagar": {
+    "en": "Khodiyar Nagar",
+    "gu": "Khodiyar Nagar",
+    "hi": "Khodiyar Nagar"
+  },
+  "Khokhara Circle": {
+    "en": "Khokhara Circle",
+    "gu": "Khokhara Circle",
+    "hi": "Khokhara Circle"
+  },
+  "Kiran Park": {
+    "en": "Kiran Park",
+    "gu": "Kiran Park",
+    "hi": "Kiran Park"
+  },
+  "Kisan Lend": {
+    "en": "Kisan Lend",
+    "gu": "Kisan Lend",
+    "hi": "Kisan Lend"
+  },
+  "Koba Circle": {
+    "en": "Koba Circle",
+    "gu": "Koba Circle",
+    "hi": "Koba Circle"
+  },
+  "Koba Gam": {
+    "en": "Koba Gam",
+    "gu": "Koba Gam",
+    "hi": "Koba Gam"
+  },
+  "Koteshwar Road": {
+    "en": "Koteshwar Road",
+    "gu": "Koteshwar Road",
+    "hi": "Koteshwar Road"
+  },
+  "Krushna Cinema": {
+    "en": "Krushna Cinema",
+    "gu": "Krushna Cinema",
+    "hi": "Krushna Cinema"
+  },
+  "Krushnadham": {
+    "en": "Krushnadham",
+    "gu": "Krushnadham",
+    "hi": "Krushnadham"
+  },
+  "Krushnakunj Society": {
+    "en": "Krushnakunj Society",
+    "gu": "Krushnakunj Society",
+    "hi": "Krushnakunj Society"
+  },
+  "Krushnanagar (Nava Vadaj)": {
+    "en": "Krushnanagar (Nava Vadaj)",
+    "gu": "Krushnanagar (Nava Vadaj)",
+    "hi": "Krushnanagar (Nava Vadaj)"
+  },
+  "LD Engg. College": {
+    "en": "LD Engg. College",
+    "gu": "LD Engg. College",
+    "hi": "LD Engg. College"
+  },
+  "Lakshminagar": {
+    "en": "Lakshminagar",
+    "gu": "Lakshminagar",
+    "hi": "Lakshminagar"
+  },
+  "Lal Bangla (Abhay Ghat)": {
+    "en": "Lal Bangla (Abhay Ghat)",
+    "gu": "Lal Bangla (Abhay Ghat)",
+    "hi": "Lal Bangla (Abhay Ghat)"
+  },
+  "Lal Bangla (Cg Road)": {
+    "en": "Lal Bangla (Cg Road)",
+    "gu": "Lal Bangla (Cg Road)",
+    "hi": "Lal Bangla (Cg Road)"
+  },
+  "Lal Darwaja": {
+    "en": "Lal Darwaja",
+    "gu": "Lal Darwaja",
+    "hi": "Lal Darwaja"
+  },
+  "Lala Kaka Municipal Hall": {
+    "en": "Lala Kaka Municipal Hall",
+    "gu": "Lala Kaka Municipal Hall",
+    "hi": "Lala Kaka Municipal Hall"
+  },
+  "Lavanya Society": {
+    "en": "Lavanya Society",
+    "gu": "Lavanya Society",
+    "hi": "Lavanya Society"
+  },
+  "Law College": {
+    "en": "Law College",
+    "gu": "Law College",
+    "hi": "Law College"
+  },
+  "Law Garden": {
+    "en": "Law Garden",
+    "gu": "Law Garden",
+    "hi": "Law Garden"
+  },
+  "Limdi (Prem Darwaja)": {
+    "en": "Limdi (Prem Darwaja)",
+    "gu": "Limdi (Prem Darwaja)",
+    "hi": "Limdi (Prem Darwaja)"
+  },
+  "Lion Sharad Mehta Garden": {
+    "en": "Lion Sharad Mehta Garden",
+    "gu": "Lion Sharad Mehta Garden",
+    "hi": "Lion Sharad Mehta Garden"
+  },
+  "Lokamanya Tilak Baug": {
+    "en": "Lokamanya Tilak Baug",
+    "gu": "Lokamanya Tilak Baug",
+    "hi": "Lokamanya Tilak Baug"
+  },
+  "M J Library": {
+    "en": "M J Library",
+    "gu": "M J Library",
+    "hi": "M J Library"
+  },
+  "Madalpur (Town Hall)": {
+    "en": "Madalpur (Town Hall)",
+    "gu": "Madalpur (Town Hall)",
+    "hi": "Madalpur (Town Hall)"
+  },
+  "Madhav Homes": {
+    "en": "Madhav Homes",
+    "gu": "Madhav Homes",
+    "hi": "Madhav Homes"
+  },
+  "Madhav Park": {
+    "en": "Madhav Park",
+    "gu": "Madhav Park",
+    "hi": "Madhav Park"
+  },
+  "Madhav School": {
+    "en": "Madhav School",
+    "gu": "Madhav School",
+    "hi": "Madhav School"
+  },
+  "Madhavbag (Nirnaynagar)": {
+    "en": "Madhavbag (Nirnaynagar)",
+    "gu": "Madhavbag (Nirnaynagar)",
+    "hi": "Madhavbag (Nirnaynagar)"
+  },
+  "Madhupura": {
+    "en": "Madhupura",
+    "gu": "Madhupura",
+    "hi": "Madhupura"
+  },
+  "Madrasi Mandir": {
+    "en": "Madrasi Mandir",
+    "gu": "Madrasi Mandir",
+    "hi": "Madrasi Mandir"
+  },
+  "Mahadevnagar (Naranpura)": {
+    "en": "Mahadevnagar (Naranpura)",
+    "gu": "Mahadevnagar (Naranpura)",
+    "hi": "Mahadevnagar (Naranpura)"
+  },
+  "Mahadevnagar Tekra": {
+    "en": "Mahadevnagar Tekra",
+    "gu": "Mahadevnagar Tekra",
+    "hi": "Mahadevnagar Tekra"
+  },
+  "Maharashtra Society": {
+    "en": "Maharashtra Society",
+    "gu": "Maharashtra Society",
+    "hi": "Maharashtra Society"
+  },
+  "Mahatma Mandir": {
+    "en": "Mahatma Mandir",
+    "gu": "Mahatma Mandir",
+    "hi": "Mahatma Mandir"
+  },
+  "Maheshwari Society": {
+    "en": "Maheshwari Society",
+    "gu": "Maheshwari Society",
+    "hi": "Maheshwari Society"
+  },
+  "Mahipatram Ashram": {
+    "en": "Mahipatram Ashram",
+    "gu": "Mahipatram Ashram",
+    "hi": "Mahipatram Ashram"
+  },
+  "Maktampura Ward Office": {
+    "en": "Maktampura Ward Office",
+    "gu": "Maktampura Ward Office",
+    "hi": "Maktampura Ward Office"
+  },
+  "Malav Talav": {
+    "en": "Malav Talav",
+    "gu": "Malav Talav",
+    "hi": "Malav Talav"
+  },
+  "Manav Mandir": {
+    "en": "Manav Mandir",
+    "gu": "Manav Mandir",
+    "hi": "Manav Mandir"
+  },
+  "Manekbag Hall": {
+    "en": "Manekbag Hall",
+    "gu": "Manekbag Hall",
+    "hi": "Manekbag Hall"
+  },
+  "Manekbaug": {
+    "en": "Manekbaug",
+    "gu": "Manekbaug",
+    "hi": "Manekbaug"
+  },
+  "Mango Garden": {
+    "en": "Mango Garden",
+    "gu": "Mango Garden",
+    "hi": "Mango Garden"
+  },
+  "Manichandra Society": {
+    "en": "Manichandra Society",
+    "gu": "Manichandra Society",
+    "hi": "Manichandra Society"
+  },
+  "Manidhar Society": {
+    "en": "Manidhar Society",
+    "gu": "Manidhar Society",
+    "hi": "Manidhar Society"
+  },
+  "Manikamal Society": {
+    "en": "Manikamal Society",
+    "gu": "Manikamal Society",
+    "hi": "Manikamal Society"
+  },
+  "Maninagar": {
+    "en": "Maninagar",
+    "gu": "Maninagar",
+    "hi": "Maninagar"
+  },
+  "Maninagar Char Rasta": {
+    "en": "Maninagar Char Rasta",
+    "gu": "Maninagar Char Rasta",
+    "hi": "Maninagar Char Rasta"
+  },
+  "Maninagar Railway Crossing": {
+    "en": "Maninagar Railway Crossing",
+    "gu": "Maninagar Railway Crossing",
+    "hi": "Maninagar Railway Crossing"
+  },
+  "Maruti Complex (Subhash Chowk)": {
+    "en": "Maruti Complex (Subhash Chowk)",
+    "gu": "Maruti Complex (Subhash Chowk)",
+    "hi": "Maruti Complex (Subhash Chowk)"
+  },
+  "Maruti Vidyalay": {
+    "en": "Maruti Vidyalay",
+    "gu": "Maruti Vidyalay",
+    "hi": "Maruti Vidyalay"
+  },
+  "Medi Link Hospital": {
+    "en": "Medi Link Hospital",
+    "gu": "Medi Link Hospital",
+    "hi": "Medi Link Hospital"
+  },
+  "Memnagar": {
+    "en": "Memnagar",
+    "gu": "Memnagar",
+    "hi": "Memnagar"
+  },
+  "Memnagar Gam": {
+    "en": "Memnagar Gam",
+    "gu": "Memnagar Gam",
+    "hi": "Memnagar Gam"
+  },
+  "Memnagar Tubewell Station": {
+    "en": "Memnagar Tubewell Station",
+    "gu": "Memnagar Tubewell Station",
+    "hi": "Memnagar Tubewell Station"
+  },
+  "Metro Station": {
+    "en": "Metro Station",
+    "gu": "Metro Station",
+    "hi": "Metro Station"
+  },
+  "Mill Owners Association": {
+    "en": "Mill Owners Association",
+    "gu": "Mill Owners Association",
+    "hi": "Mill Owners Association"
+  },
+  "Mirambika High School": {
+    "en": "Mirambika High School",
+    "gu": "Mirambika High School",
+    "hi": "Mirambika High School"
+  },
+  "Mithakhali": {
+    "en": "Mithakhali",
+    "gu": "Mithakhali",
+    "hi": "Mithakhali"
+  },
+  "Motera Cross Road": {
+    "en": "Motera Cross Road",
+    "gu": "Motera Cross Road",
+    "hi": "Motera Cross Road"
+  },
+  "Motera Crossroad BRT": {
+    "en": "Motera Crossroad BRT",
+    "gu": "Motera Crossroad BRT",
+    "hi": "Motera Crossroad BRT"
+  },
+  "Motera Gam": {
+    "en": "Motera Gam",
+    "gu": "Motera Gam",
+    "hi": "Motera Gam"
+  },
+  "Motera Stadium": {
+    "en": "Motera Stadium",
+    "gu": "Motera Stadium",
+    "hi": "Motera Stadium"
+  },
+  "Mount Carmel School": {
+    "en": "Mount Carmel School",
+    "gu": "Mount Carmel School",
+    "hi": "Mount Carmel School"
+  },
+  "Muktidham jain derasar": {
+    "en": "Muktidham jain derasar",
+    "gu": "Muktidham jain derasar",
+    "hi": "Muktidham jain derasar"
+  },
+  "Municipal Corporation Office": {
+    "en": "Municipal Corporation Office",
+    "gu": "Municipal Corporation Office",
+    "hi": "Municipal Corporation Office"
+  },
+  "Municipal Market": {
+    "en": "Municipal Market",
+    "gu": "Municipal Market",
+    "hi": "Municipal Market"
+  },
+  "Municipal Quarters (Cg Road)": {
+    "en": "Municipal Quarters (Cg Road)",
+    "gu": "Municipal Quarters (Cg Road)",
+    "hi": "Municipal Quarters (Cg Road)"
+  },
+  "Municipal Quarters (Vasna)": {
+    "en": "Municipal Quarters (Vasna)",
+    "gu": "Municipal Quarters (Vasna)",
+    "hi": "Municipal Quarters (Vasna)"
+  },
+  "Municipal Snanagar (Sabarmati)": {
+    "en": "Municipal Snanagar (Sabarmati)",
+    "gu": "Municipal Snanagar (Sabarmati)",
+    "hi": "Municipal Snanagar (Sabarmati)"
+  },
+  "Municipal Staff Quarters": {
+    "en": "Municipal Staff Quarters",
+    "gu": "Municipal Staff Quarters",
+    "hi": "Municipal Staff Quarters"
+  },
+  "N R Patel Park": {
+    "en": "N R Patel Park",
+    "gu": "N R Patel Park",
+    "hi": "N R Patel Park"
+  },
+  "N.R.Patel Park": {
+    "en": "N.R.Patel Park",
+    "gu": "N.R.Patel Park",
+    "hi": "N.R.Patel Park"
+  },
+  "Nagari Hospital": {
+    "en": "Nagari Hospital",
+    "gu": "Nagari Hospital",
+    "hi": "Nagari Hospital"
+  },
+  "Nagarvel Hanuman": {
+    "en": "Nagarvel Hanuman",
+    "gu": "Nagarvel Hanuman",
+    "hi": "Nagarvel Hanuman"
+  },
+  "Nand Apartment": {
+    "en": "Nand Apartment",
+    "gu": "Nand Apartment",
+    "hi": "Nand Apartment"
+  },
+  "Nandej-Barejadi Railway Station": {
+    "en": "Nandej-Barejadi Railway Station",
+    "gu": "Nandej-Barejadi Railway Station",
+    "hi": "Nandej-Barejadi Railway Station"
+  },
+  "Naranpura Char Rasta": {
+    "en": "Naranpura Char Rasta",
+    "gu": "Naranpura Char Rasta",
+    "hi": "Naranpura Char Rasta"
+  },
+  "Narendra Modi Stadium": {
+    "en": "Narendra Modi Stadium",
+    "gu": "Narendra Modi Stadium",
+    "hi": "Narendra Modi Stadium"
+  },
+  "Narmada Canal": {
+    "en": "Narmada Canal",
+    "gu": "Narmada Canal",
+    "hi": "Narmada Canal"
+  },
+  "Naroda Railway Station": {
+    "en": "Naroda Railway Station",
+    "gu": "Naroda Railway Station",
+    "hi": "Naroda Railway Station"
+  },
+  "Narsinhji": {
+    "en": "Narsinhji",
+    "gu": "Narsinhji",
+    "hi": "Narsinhji"
+  },
+  "Nataraj Cinema": {
+    "en": "Nataraj Cinema",
+    "gu": "Nataraj Cinema",
+    "hi": "Nataraj Cinema"
+  },
+  "Nava Vadaj": {
+    "en": "Nava Vadaj",
+    "gu": "Nava Vadaj",
+    "hi": "Nava Vadaj"
+  },
+  "Nava Vadaj Police Chowki": {
+    "en": "Nava Vadaj Police Chowki",
+    "gu": "Nava Vadaj Police Chowki",
+    "hi": "Nava Vadaj Police Chowki"
+  },
+  "Navarangpura": {
+    "en": "Navarangpura",
+    "gu": "Navarangpura",
+    "hi": "Navarangpura"
+  },
+  "Navi Chal": {
+    "en": "Navi Chal",
+    "gu": "Navi Chal",
+    "hi": "Navi Chal"
+  },
+  "Navjivan Blocks": {
+    "en": "Navjivan Blocks",
+    "gu": "Navjivan Blocks",
+    "hi": "Navjivan Blocks"
+  },
+  "Navkar Apartment": {
+    "en": "Navkar Apartment",
+    "gu": "Navkar Apartment",
+    "hi": "Navkar Apartment"
+  },
+  "Navrang Circle": {
+    "en": "Navrang Circle",
+    "gu": "Navrang Circle",
+    "hi": "Navrang Circle"
+  },
+  "Navrang School": {
+    "en": "Navrang School",
+    "gu": "Navrang School",
+    "hi": "Navrang School"
+  },
+  "Neminath Derasar(Gomtipur)": {
+    "en": "Neminath Derasar(Gomtipur)",
+    "gu": "Neminath Derasar(Gomtipur)",
+    "hi": "Neminath Derasar(Gomtipur)"
+  },
+  "Nenpur Railway Station": {
+    "en": "Nenpur Railway Station",
+    "gu": "Nenpur Railway Station",
+    "hi": "Nenpur Railway Station"
+  },
+  "New Anaj Bazar": {
+    "en": "New Anaj Bazar",
+    "gu": "New Anaj Bazar",
+    "hi": "New Anaj Bazar"
+  },
+  "New Cloth Market": {
+    "en": "New Cloth Market",
+    "gu": "New Cloth Market",
+    "hi": "New Cloth Market"
+  },
+  "New Cotton Mill": {
+    "en": "New Cotton Mill",
+    "gu": "New Cotton Mill",
+    "hi": "New Cotton Mill"
+  },
+  "New Maruti Society": {
+    "en": "New Maruti Society",
+    "gu": "New Maruti Society",
+    "hi": "New Maruti Society"
+  },
+  "New Ritanagar": {
+    "en": "New Ritanagar",
+    "gu": "New Ritanagar",
+    "hi": "New Ritanagar"
+  },
+  "New York Complex": {
+    "en": "New York Complex",
+    "gu": "New York Complex",
+    "hi": "New York Complex"
+  },
+  "Nil Complex (Nandanvan Apartment)": {
+    "en": "Nil Complex (Nandanvan Apartment)",
+    "gu": "Nil Complex (Nandanvan Apartment)",
+    "hi": "Nil Complex (Nandanvan Apartment)"
+  },
+  "Niranjan Society": {
+    "en": "Niranjan Society",
+    "gu": "Niranjan Society",
+    "hi": "Niranjan Society"
+  },
+  "Nirant Chokdi": {
+    "en": "Nirant Chokdi",
+    "gu": "Nirant Chokdi",
+    "hi": "Nirant Chokdi"
+  },
+  "Nirant Cross Road": {
+    "en": "Nirant Cross Road",
+    "gu": "Nirant Cross Road",
+    "hi": "Nirant Cross Road"
+  },
+  "Nirantnagar": {
+    "en": "Nirantnagar",
+    "gu": "Nirantnagar",
+    "hi": "Nirantnagar"
+  },
+  "Nirnaynagar Garnala": {
+    "en": "Nirnaynagar Garnala",
+    "gu": "Nirnaynagar Garnala",
+    "hi": "Nirnaynagar Garnala"
+  },
+  "Nutan Society": {
+    "en": "Nutan Society",
+    "gu": "Nutan Society",
+    "hi": "Nutan Society"
+  },
+  "Octroinaka (Sanyojannagar Society)": {
+    "en": "Octroinaka (Sanyojannagar Society)",
+    "gu": "Octroinaka (Sanyojannagar Society)",
+    "hi": "Octroinaka (Sanyojannagar Society)"
+  },
+  "Old High Court": {
+    "en": "Old High Court",
+    "gu": "Old High Court",
+    "hi": "Old High Court"
+  },
+  "P.W.D. Workshop": {
+    "en": "P.W.D. Workshop",
+    "gu": "P.W.D. Workshop",
+    "hi": "P.W.D. Workshop"
+  },
+  "PDEU": {
+    "en": "PDEU",
+    "gu": "PDEU",
+    "hi": "PDEU"
+  },
+  "Paldi": {
+    "en": "Paldi",
+    "gu": "Paldi",
+    "hi": "Paldi"
+  },
+  "Paldi Metro Station": {
+    "en": "Paldi Metro Station",
+    "gu": "Paldi Metro Station",
+    "hi": "Paldi Metro Station"
+  },
+  "Paldi-Kankaj Gam": {
+    "en": "Paldi-Kankaj Gam",
+    "gu": "Paldi-Kankaj Gam",
+    "hi": "Paldi-Kankaj Gam"
+  },
+  "Paliyadnagar": {
+    "en": "Paliyadnagar",
+    "gu": "Paliyadnagar",
+    "hi": "Paliyadnagar"
+  },
+  "Panch Kuva Darwaja": {
+    "en": "Panch Kuva Darwaja",
+    "gu": "Panch Kuva Darwaja",
+    "hi": "Panch Kuva Darwaja"
+  },
+  "Panchkuva": {
+    "en": "Panchkuva",
+    "gu": "Panchkuva",
+    "hi": "Panchkuva"
+  },
+  "Panchshil Society": {
+    "en": "Panchshil Society",
+    "gu": "Panchshil Society",
+    "hi": "Panchshil Society"
+  },
+  "Pankornaka": {
+    "en": "Pankornaka",
+    "gu": "Pankornaka",
+    "hi": "Pankornaka"
+  },
+  "Parimal Garden": {
+    "en": "Parimal Garden",
+    "gu": "Parimal Garden",
+    "hi": "Parimal Garden"
+  },
+  "Parsi Agiyari": {
+    "en": "Parsi Agiyari",
+    "gu": "Parsi Agiyari",
+    "hi": "Parsi Agiyari"
+  },
+  "Passport Office": {
+    "en": "Passport Office",
+    "gu": "Passport Office",
+    "hi": "Passport Office"
+  },
+  "Patel Mills": {
+    "en": "Patel Mills",
+    "gu": "Patel Mills",
+    "hi": "Patel Mills"
+  },
+  "Paththar Kuva": {
+    "en": "Paththar Kuva",
+    "gu": "Paththar Kuva",
+    "hi": "Paththar Kuva"
+  },
+  "Patrakar Colony (Vijaynagar)": {
+    "en": "Patrakar Colony (Vijaynagar)",
+    "gu": "Patrakar Colony (Vijaynagar)",
+    "hi": "Patrakar Colony (Vijaynagar)"
+  },
+  "Platinum Plaza": {
+    "en": "Platinum Plaza",
+    "gu": "Platinum Plaza",
+    "hi": "Platinum Plaza"
+  },
+  "Power House": {
+    "en": "Power House",
+    "gu": "Power House",
+    "hi": "Power House"
+  },
+  "Power House Crossing": {
+    "en": "Power House Crossing",
+    "gu": "Power House Crossing",
+    "hi": "Power House Crossing"
+  },
+  "Power House Staff Quarters": {
+    "en": "Power House Staff Quarters",
+    "gu": "Power House Staff Quarters",
+    "hi": "Power House Staff Quarters"
+  },
+  "Pragatinagar": {
+    "en": "Pragatinagar",
+    "gu": "Pragatinagar",
+    "hi": "Pragatinagar"
+  },
+  "Prakash College": {
+    "en": "Prakash College",
+    "gu": "Prakash College",
+    "hi": "Prakash College"
+  },
+  "Prakash Day care  School": {
+    "en": "Prakash Day care  School",
+    "gu": "Prakash Day care  School",
+    "hi": "Prakash Day care  School"
+  },
+  "Pratapkunj": {
+    "en": "Pratapkunj",
+    "gu": "Pratapkunj",
+    "hi": "Pratapkunj"
+  },
+  "Pravinnagar": {
+    "en": "Pravinnagar",
+    "gu": "Pravinnagar",
+    "hi": "Pravinnagar"
+  },
+  "Prerana Complex": {
+    "en": "Prerana Complex",
+    "gu": "Prerana Complex",
+    "hi": "Prerana Complex"
+  },
+  "Prime Plaza": {
+    "en": "Prime Plaza",
+    "gu": "Prime Plaza",
+    "hi": "Prime Plaza"
+  },
+  "Pritamnagar": {
+    "en": "Pritamnagar",
+    "gu": "Pritamnagar",
+    "hi": "Pritamnagar"
+  },
+  "Punam Party Plot": {
+    "en": "Punam Party Plot",
+    "gu": "Punam Party Plot",
+    "hi": "Punam Party Plot"
+  },
+  "Purushottamnagar (Bopal)": {
+    "en": "Purushottamnagar (Bopal)",
+    "gu": "Purushottamnagar (Bopal)",
+    "hi": "Purushottamnagar (Bopal)"
+  },
+  "Purushottamnagar (Nava Vadaj)": {
+    "en": "Purushottamnagar (Nava Vadaj)",
+    "gu": "Purushottamnagar (Nava Vadaj)",
+    "hi": "Purushottamnagar (Nava Vadaj)"
+  },
+  "Purushottamnagar Corner": {
+    "en": "Purushottamnagar Corner",
+    "gu": "Purushottamnagar Corner",
+    "hi": "Purushottamnagar Corner"
+  },
+  "Purvdeep Society": {
+    "en": "Purvdeep Society",
+    "gu": "Purvdeep Society",
+    "hi": "Purvdeep Society"
+  },
+  "R.H.Patel College (Ganesh Vidyalay)": {
+    "en": "R.H.Patel College (Ganesh Vidyalay)",
+    "gu": "R.H.Patel College (Ganesh Vidyalay)",
+    "hi": "R.H.Patel College (Ganesh Vidyalay)"
+  },
+  "R.T.O. (East)": {
+    "en": "R.T.O. (East)",
+    "gu": "R.T.O. (East)",
+    "hi": "R.T.O. (East)"
+  },
+  "R.T.O. Circle": {
+    "en": "R.T.O. Circle",
+    "gu": "R.T.O. Circle",
+    "hi": "R.T.O. Circle"
+  },
+  "R.T.O. Extension": {
+    "en": "R.T.O. Extension",
+    "gu": "R.T.O. Extension",
+    "hi": "R.T.O. Extension"
+  },
+  "RTO Circle": {
+    "en": "RTO Circle",
+    "gu": "RTO Circle",
+    "hi": "RTO Circle"
+  },
+  "Rabari Colony": {
+    "en": "Rabari Colony",
+    "gu": "Rabari Colony",
+    "hi": "Rabari Colony"
+  },
+  "Radhaswami Satsang (Ranip)": {
+    "en": "Radhaswami Satsang (Ranip)",
+    "gu": "Radhaswami Satsang (Ranip)",
+    "hi": "Radhaswami Satsang (Ranip)"
+  },
+  "Raghulilla Residency": {
+    "en": "Raghulilla Residency",
+    "gu": "Raghulilla Residency",
+    "hi": "Raghulilla Residency"
+  },
+  "Raikhad Char Rasta": {
+    "en": "Raikhad Char Rasta",
+    "gu": "Raikhad Char Rasta",
+    "hi": "Raikhad Char Rasta"
+  },
+  "Railway Colony (Kali Bridge Cross Road)": {
+    "en": "Railway Colony (Kali Bridge Cross Road)",
+    "gu": "Railway Colony (Kali Bridge Cross Road)",
+    "hi": "Railway Colony (Kali Bridge Cross Road)"
+  },
+  "Railway Colony (Maninagar)": {
+    "en": "Railway Colony (Maninagar)",
+    "gu": "Railway Colony (Maninagar)",
+    "hi": "Railway Colony (Maninagar)"
+  },
+  "Railway Colony Hospital": {
+    "en": "Railway Colony Hospital",
+    "gu": "Railway Colony Hospital",
+    "hi": "Railway Colony Hospital"
+  },
+  "Railway Crossing": {
+    "en": "Railway Crossing",
+    "gu": "Railway Crossing",
+    "hi": "Railway Crossing"
+  },
+  "Railway Crossing (Maninagar)": {
+    "en": "Railway Crossing (Maninagar)",
+    "gu": "Railway Crossing (Maninagar)",
+    "hi": "Railway Crossing (Maninagar)"
+  },
+  "Railway Garnala": {
+    "en": "Railway Garnala",
+    "gu": "Railway Garnala",
+    "hi": "Railway Garnala"
+  },
+  "Railway Garnalu": {
+    "en": "Railway Garnalu",
+    "gu": "Railway Garnalu",
+    "hi": "Railway Garnalu"
+  },
+  "Railway School": {
+    "en": "Railway School",
+    "gu": "Railway School",
+    "hi": "Railway School"
+  },
+  "Railway Siding": {
+    "en": "Railway Siding",
+    "gu": "Railway Siding",
+    "hi": "Railway Siding"
+  },
+  "Raipur Darwaja": {
+    "en": "Raipur Darwaja",
+    "gu": "Raipur Darwaja",
+    "hi": "Raipur Darwaja"
+  },
+  "Raja Palace (Chakshu Bank)": {
+    "en": "Raja Palace (Chakshu Bank)",
+    "gu": "Raja Palace (Chakshu Bank)",
+    "hi": "Raja Palace (Chakshu Bank)"
+  },
+  "Rajavi Opal": {
+    "en": "Rajavi Opal",
+    "gu": "Rajavi Opal",
+    "hi": "Rajavi Opal"
+  },
+  "Rajdeep Park": {
+    "en": "Rajdeep Park",
+    "gu": "Rajdeep Park",
+    "hi": "Rajdeep Park"
+  },
+  "Rajdeep Society": {
+    "en": "Rajdeep Society",
+    "gu": "Rajdeep Society",
+    "hi": "Rajdeep Society"
+  },
+  "Rajhans Society": {
+    "en": "Rajhans Society",
+    "gu": "Rajhans Society",
+    "hi": "Rajhans Society"
+  },
+  "Rajivnagar": {
+    "en": "Rajivnagar",
+    "gu": "Rajivnagar",
+    "hi": "Rajivnagar"
+  },
+  "Rajkamal Park": {
+    "en": "Rajkamal Park",
+    "gu": "Rajkamal Park",
+    "hi": "Rajkamal Park"
+  },
+  "Rajpur Tollnaka": {
+    "en": "Rajpur Tollnaka",
+    "gu": "Rajpur Tollnaka",
+    "hi": "Rajpur Tollnaka"
+  },
+  "Rajratna Society": {
+    "en": "Rajratna Society",
+    "gu": "Rajratna Society",
+    "hi": "Rajratna Society"
+  },
+  "Ram Rajya Nagar": {
+    "en": "Ram Rajya Nagar",
+    "gu": "Ram Rajya Nagar",
+    "hi": "Ram Rajya Nagar"
+  },
+  "Ramanand Kot": {
+    "en": "Ramanand Kot",
+    "gu": "Ramanand Kot",
+    "hi": "Ramanand Kot"
+  },
+  "Ramapir No Tekaro": {
+    "en": "Ramapir No Tekaro",
+    "gu": "Ramapir No Tekaro",
+    "hi": "Ramapir No Tekaro"
+  },
+  "Ramapirno Tekro": {
+    "en": "Ramapirno Tekro",
+    "gu": "Ramapirno Tekro",
+    "hi": "Ramapirno Tekro"
+  },
+  "Ramapirnu Mandir": {
+    "en": "Ramapirnu Mandir",
+    "gu": "Ramapirnu Mandir",
+    "hi": "Ramapirnu Mandir"
+  },
+  "Rameshwar Park": {
+    "en": "Rameshwar Park",
+    "gu": "Rameshwar Park",
+    "hi": "Rameshwar Park"
+  },
+  "Ramji Bhagat Chowk (Satyamnagar)": {
+    "en": "Ramji Bhagat Chowk (Satyamnagar)",
+    "gu": "Ramji Bhagat Chowk (Satyamnagar)",
+    "hi": "Ramji Bhagat Chowk (Satyamnagar)"
+  },
+  "Ramnagar": {
+    "en": "Ramnagar",
+    "gu": "Ramnagar",
+    "hi": "Ramnagar"
+  },
+  "Ramrajyanagar": {
+    "en": "Ramrajyanagar",
+    "gu": "Ramrajyanagar",
+    "hi": "Ramrajyanagar"
+  },
+  "Ramwadi (Nirnaynagar)": {
+    "en": "Ramwadi (Nirnaynagar)",
+    "gu": "Ramwadi (Nirnaynagar)",
+    "hi": "Ramwadi (Nirnaynagar)"
+  },
+  "Randesan": {
+    "en": "Randesan",
+    "gu": "Randesan",
+    "hi": "Randesan"
+  },
+  "Rangjyot Society": {
+    "en": "Rangjyot Society",
+    "gu": "Rangjyot Society",
+    "hi": "Rangjyot Society"
+  },
+  "Ranip": {
+    "en": "Ranip",
+    "gu": "Ranip",
+    "hi": "Ranip"
+  },
+  "Ranip Cross Road": {
+    "en": "Ranip Cross Road",
+    "gu": "Ranip Cross Road",
+    "hi": "Ranip Cross Road"
+  },
+  "Ranip ST Bus Stand": {
+    "en": "Ranip ST Bus Stand",
+    "gu": "Ranip ST Bus Stand",
+    "hi": "Ranip ST Bus Stand"
+  },
+  "Ratanpur": {
+    "en": "Ratanpur",
+    "gu": "Ratanpur",
+    "hi": "Ratanpur"
+  },
+  "Rathi Apartment": {
+    "en": "Rathi Apartment",
+    "gu": "Rathi Apartment",
+    "hi": "Rathi Apartment"
+  },
+  "Raypur Mills": {
+    "en": "Raypur Mills",
+    "gu": "Raypur Mills",
+    "hi": "Raypur Mills"
+  },
+  "Raysan": {
+    "en": "Raysan",
+    "gu": "Raysan",
+    "hi": "Raysan"
+  },
+  "Rentiyawadi": {
+    "en": "Rentiyawadi",
+    "gu": "Rentiyawadi",
+    "hi": "Rentiyawadi"
+  },
+  "Revdi Bazar": {
+    "en": "Revdi Bazar",
+    "gu": "Revdi Bazar",
+    "hi": "Revdi Bazar"
+  },
+  "Rifle Club Crossroad": {
+    "en": "Rifle Club Crossroad",
+    "gu": "Rifle Club Crossroad",
+    "hi": "Rifle Club Crossroad"
+  },
+  "Ritanagar": {
+    "en": "Ritanagar",
+    "gu": "Ritanagar",
+    "hi": "Ritanagar"
+  },
+  "River Side Park": {
+    "en": "River Side Park",
+    "gu": "River Side Park",
+    "hi": "River Side Park"
+  },
+  "Riverfront Market": {
+    "en": "Riverfront Market",
+    "gu": "Riverfront Market",
+    "hi": "Riverfront Market"
+  },
+  "Riverfront Park(Usmanpura)": {
+    "en": "Riverfront Park(Usmanpura)",
+    "gu": "Riverfront Park(Usmanpura)",
+    "hi": "Riverfront Park(Usmanpura)"
+  },
+  "Rudreshwar Mahadev": {
+    "en": "Rudreshwar Mahadev",
+    "gu": "Rudreshwar Mahadev",
+    "hi": "Rudreshwar Mahadev"
+  },
+  "S.P. Ring road (Bopal)": {
+    "en": "S.P. Ring road (Bopal)",
+    "gu": "S.P. Ring road (Bopal)",
+    "hi": "S.P. Ring road (Bopal)"
+  },
+  "S.P. Square (Bavlu)": {
+    "en": "S.P. Square (Bavlu)",
+    "gu": "S.P. Square (Bavlu)",
+    "hi": "S.P. Square (Bavlu)"
+  },
+  "S.P.Ring Road (Pushp Residency)": {
+    "en": "S.P.Ring Road (Pushp Residency)",
+    "gu": "S.P.Ring Road (Pushp Residency)",
+    "hi": "S.P.Ring Road (Pushp Residency)"
+  },
+  "S.V.P. Hospital": {
+    "en": "S.V.P. Hospital",
+    "gu": "S.V.P. Hospital",
+    "hi": "S.V.P. Hospital"
+  },
+  "SP Stadium": {
+    "en": "SP Stadium",
+    "gu": "SP Stadium",
+    "hi": "SP Stadium"
+  },
+  "Sabarmati": {
+    "en": "Sabarmati",
+    "gu": "Sabarmati",
+    "hi": "Sabarmati"
+  },
+  "Sabarmati Municipal Swimming pool": {
+    "en": "Sabarmati Municipal Swimming pool",
+    "gu": "Sabarmati Municipal Swimming pool",
+    "hi": "Sabarmati Municipal Swimming pool"
+  },
+  "Sabarmati Police Chowki BRT": {
+    "en": "Sabarmati Police Chowki BRT",
+    "gu": "Sabarmati Police Chowki BRT",
+    "hi": "Sabarmati Police Chowki BRT"
+  },
+  "Sabarmati Police Station": {
+    "en": "Sabarmati Police Station",
+    "gu": "Sabarmati Police Station",
+    "hi": "Sabarmati Police Station"
+  },
+  "Sabarmati Power House": {
+    "en": "Sabarmati Power House",
+    "gu": "Sabarmati Power House",
+    "hi": "Sabarmati Power House"
+  },
+  "Sachivalaya": {
+    "en": "Sachivalaya",
+    "gu": "Sachivalaya",
+    "hi": "Sachivalaya"
+  },
+  "Sahajanand Bunglows (Science City)": {
+    "en": "Sahajanand Bunglows (Science City)",
+    "gu": "Sahajanand Bunglows (Science City)",
+    "hi": "Sahajanand Bunglows (Science City)"
+  },
+  "Sahajanand Bunglows (Tarveni Vidyalay)": {
+    "en": "Sahajanand Bunglows (Tarveni Vidyalay)",
+    "gu": "Sahajanand Bunglows (Tarveni Vidyalay)",
+    "hi": "Sahajanand Bunglows (Tarveni Vidyalay)"
+  },
+  "Sahajanand Park": {
+    "en": "Sahajanand Park",
+    "gu": "Sahajanand Park",
+    "hi": "Sahajanand Park"
+  },
+  "Sai Sneh Residency": {
+    "en": "Sai Sneh Residency",
+    "gu": "Sai Sneh Residency",
+    "hi": "Sai Sneh Residency"
+  },
+  "Saidham Tenament": {
+    "en": "Saidham Tenament",
+    "gu": "Saidham Tenament",
+    "hi": "Saidham Tenament"
+  },
+  "Sal Hospital": {
+    "en": "Sal Hospital",
+    "gu": "Sal Hospital",
+    "hi": "Sal Hospital"
+  },
+  "Samarth Society": {
+    "en": "Samarth Society",
+    "gu": "Samarth Society",
+    "hi": "Samarth Society"
+  },
+  "Samartheshwar Mahadev": {
+    "en": "Samartheshwar Mahadev",
+    "gu": "Samartheshwar Mahadev",
+    "hi": "Samartheshwar Mahadev"
+  },
+  "Samras Hostel": {
+    "en": "Samras Hostel",
+    "gu": "Samras Hostel",
+    "hi": "Samras Hostel"
+  },
+  "Sanathal Railway Overbridge": {
+    "en": "Sanathal Railway Overbridge",
+    "gu": "Sanathal Railway Overbridge",
+    "hi": "Sanathal Railway Overbridge"
+  },
+  "Sandesh Press": {
+    "en": "Sandesh Press",
+    "gu": "Sandesh Press",
+    "hi": "Sandesh Press"
+  },
+  "Sangath Bunglows": {
+    "en": "Sangath Bunglows",
+    "gu": "Sangath Bunglows",
+    "hi": "Sangath Bunglows"
+  },
+  "Sanghavi High School": {
+    "en": "Sanghavi High School",
+    "gu": "Sanghavi High School",
+    "hi": "Sanghavi High School"
+  },
+  "Sanjay Chowk": {
+    "en": "Sanjay Chowk",
+    "gu": "Sanjay Chowk",
+    "hi": "Sanjay Chowk"
+  },
+  "Sanjivani Hospital": {
+    "en": "Sanjivani Hospital",
+    "gu": "Sanjivani Hospital",
+    "hi": "Sanjivani Hospital"
+  },
+  "Sanyas Ashram": {
+    "en": "Sanyas Ashram",
+    "gu": "Sanyas Ashram",
+    "hi": "Sanyas Ashram"
+  },
+  "Sanyojan Society": {
+    "en": "Sanyojan Society",
+    "gu": "Sanyojan Society",
+    "hi": "Sanyojan Society"
+  },
+  "Sanyojannagar (Juna Octroi Naka)": {
+    "en": "Sanyojannagar (Juna Octroi Naka)",
+    "gu": "Sanyojannagar (Juna Octroi Naka)",
+    "hi": "Sanyojannagar (Juna Octroi Naka)"
+  },
+  "Sarangpur": {
+    "en": "Sarangpur",
+    "gu": "Sarangpur",
+    "hi": "Sarangpur"
+  },
+  "Sarangpur Darwaja": {
+    "en": "Sarangpur Darwaja",
+    "gu": "Sarangpur Darwaja",
+    "hi": "Sarangpur Darwaja"
+  },
+  "Sarangpur Depot": {
+    "en": "Sarangpur Depot",
+    "gu": "Sarangpur Depot",
+    "hi": "Sarangpur Depot"
+  },
+  "Sarani Kamdar Society": {
+    "en": "Sarani Kamdar Society",
+    "gu": "Sarani Kamdar Society",
+    "hi": "Sarani Kamdar Society"
+  },
+  "Saraspur Char Rasta": {
+    "en": "Saraspur Char Rasta",
+    "gu": "Saraspur Char Rasta",
+    "hi": "Saraspur Char Rasta"
+  },
+  "Sardar Bhavan (Gol Limda)": {
+    "en": "Sardar Bhavan (Gol Limda)",
+    "gu": "Sardar Bhavan (Gol Limda)",
+    "hi": "Sardar Bhavan (Gol Limda)"
+  },
+  "Sardar Patel Colony": {
+    "en": "Sardar Patel Colony",
+    "gu": "Sardar Patel Colony",
+    "hi": "Sardar Patel Colony"
+  },
+  "Sardar Patel Institute": {
+    "en": "Sardar Patel Institute",
+    "gu": "Sardar Patel Institute",
+    "hi": "Sardar Patel Institute"
+  },
+  "Sardar Patel Square": {
+    "en": "Sardar Patel Square",
+    "gu": "Sardar Patel Square",
+    "hi": "Sardar Patel Square"
+  },
+  "Sardar Patel Stadium": {
+    "en": "Sardar Patel Stadium",
+    "gu": "Sardar Patel Stadium",
+    "hi": "Sardar Patel Stadium"
+  },
+  "Sardar Patel Stadium (Metro Station)": {
+    "en": "Sardar Patel Stadium (Metro Station)",
+    "gu": "Sardar Patel Stadium (Metro Station)",
+    "hi": "Sardar Patel Stadium (Metro Station)"
+  },
+  "Sardar Smruti": {
+    "en": "Sardar Smruti",
+    "gu": "Sardar Smruti",
+    "hi": "Sardar Smruti"
+  },
+  "Sardarbag": {
+    "en": "Sardarbag",
+    "gu": "Sardarbag",
+    "hi": "Sardarbag"
+  },
+  "Sarkari Gochar": {
+    "en": "Sarkari Gochar",
+    "gu": "Sarkari Gochar",
+    "hi": "Sarkari Gochar"
+  },
+  "Sarkari Litho Press": {
+    "en": "Sarkari Litho Press",
+    "gu": "Sarkari Litho Press",
+    "hi": "Sarkari Litho Press"
+  },
+  "Sarkari Litho Press Cabin": {
+    "en": "Sarkari Litho Press Cabin",
+    "gu": "Sarkari Litho Press Cabin",
+    "hi": "Sarkari Litho Press Cabin"
+  },
+  "Sarkari Vasahat": {
+    "en": "Sarkari Vasahat",
+    "gu": "Sarkari Vasahat",
+    "hi": "Sarkari Vasahat"
+  },
+  "Sarkhej Railway Crossing": {
+    "en": "Sarkhej Railway Crossing",
+    "gu": "Sarkhej Railway Crossing",
+    "hi": "Sarkhej Railway Crossing"
+  },
+  "Sarkhej Railway Station": {
+    "en": "Sarkhej Railway Station",
+    "gu": "Sarkhej Railway Station",
+    "hi": "Sarkhej Railway Station"
+  },
+  "Sarkhej Railway Station (St 31 36 150)": {
+    "en": "Sarkhej Railway Station (St 31 36 150)",
+    "gu": "Sarkhej Railway Station (St 31 36 150)",
+    "hi": "Sarkhej Railway Station (St 31 36 150)"
+  },
+  "Sarkhej-Gandhinagar Cross Road": {
+    "en": "Sarkhej-Gandhinagar Cross Road",
+    "gu": "Sarkhej-Gandhinagar Cross Road",
+    "hi": "Sarkhej-Gandhinagar Cross Road"
+  },
+  "Sarkhej-Gandhinagar Highway Circle": {
+    "en": "Sarkhej-Gandhinagar Highway Circle",
+    "gu": "Sarkhej-Gandhinagar Highway Circle",
+    "hi": "Sarkhej-Gandhinagar Highway Circle"
+  },
+  "Sarovar-4": {
+    "en": "Sarovar-4",
+    "gu": "Sarovar-4",
+    "hi": "Sarovar-4"
+  },
+  "Sarveshwar Mahadev": {
+    "en": "Sarveshwar Mahadev",
+    "gu": "Sarveshwar Mahadev",
+    "hi": "Sarveshwar Mahadev"
+  },
+  "Satyamnagar": {
+    "en": "Satyamnagar",
+    "gu": "Satyamnagar",
+    "hi": "Satyamnagar"
+  },
+  "Satyanarayan Society": {
+    "en": "Satyanarayan Society",
+    "gu": "Satyanarayan Society",
+    "hi": "Satyanarayan Society"
+  },
+  "Saujanya Apartment": {
+    "en": "Saujanya Apartment",
+    "gu": "Saujanya Apartment",
+    "hi": "Saujanya Apartment"
+  },
+  "Saurabh Society": {
+    "en": "Saurabh Society",
+    "gu": "Saurabh Society",
+    "hi": "Saurabh Society"
+  },
+  "Saurastra Patel Kanya Chatralya": {
+    "en": "Saurastra Patel Kanya Chatralya",
+    "gu": "Saurastra Patel Kanya Chatralya",
+    "hi": "Saurastra Patel Kanya Chatralya"
+  },
+  "Science City": {
+    "en": "Science City",
+    "gu": "Science City",
+    "hi": "Science City"
+  },
+  "Science City Approach": {
+    "en": "Science City Approach",
+    "gu": "Science City Approach",
+    "hi": "Science City Approach"
+  },
+  "Sector 10A": {
+    "en": "Sector 10A",
+    "gu": "Sector 10A",
+    "hi": "Sector 10A"
+  },
+  "Sector-1": {
+    "en": "Sector-1",
+    "gu": "Sector-1",
+    "hi": "Sector-1"
+  },
+  "Sector-16": {
+    "en": "Sector-16",
+    "gu": "Sector-16",
+    "hi": "Sector-16"
+  },
+  "Sector-24": {
+    "en": "Sector-24",
+    "gu": "Sector-24",
+    "hi": "Sector-24"
+  },
+  "Sel Tax Bhavan": {
+    "en": "Sel Tax Bhavan",
+    "gu": "Sel Tax Bhavan",
+    "hi": "Sel Tax Bhavan"
+  },
+  "Shaher Kotda": {
+    "en": "Shaher Kotda",
+    "gu": "Shaher Kotda",
+    "hi": "Shaher Kotda"
+  },
+  "Shahpur": {
+    "en": "Shahpur",
+    "gu": "Shahpur",
+    "hi": "Shahpur"
+  },
+  "Shahpur Cross road": {
+    "en": "Shahpur Cross road",
+    "gu": "Shahpur Cross road",
+    "hi": "Shahpur Cross road"
+  },
+  "Shahpur Darwaja": {
+    "en": "Shahpur Darwaja",
+    "gu": "Shahpur Darwaja",
+    "hi": "Shahpur Darwaja"
+  },
+  "Shaivali Society": {
+    "en": "Shaivali Society",
+    "gu": "Shaivali Society",
+    "hi": "Shaivali Society"
+  },
+  "Shankar Bhuvan": {
+    "en": "Shankar Bhuvan",
+    "gu": "Shankar Bhuvan",
+    "hi": "Shankar Bhuvan"
+  },
+  "Shantinath Mahadev (Jay Ambenagar)": {
+    "en": "Shantinath Mahadev (Jay Ambenagar)",
+    "gu": "Shantinath Mahadev (Jay Ambenagar)",
+    "hi": "Shantinath Mahadev (Jay Ambenagar)"
+  },
+  "Sharan Sapphire": {
+    "en": "Sharan Sapphire",
+    "gu": "Sharan Sapphire",
+    "hi": "Sharan Sapphire"
+  },
+  "Sharda Mandir": {
+    "en": "Sharda Mandir",
+    "gu": "Sharda Mandir",
+    "hi": "Sharda Mandir"
+  },
+  "Sharda Society": {
+    "en": "Sharda Society",
+    "gu": "Sharda Society",
+    "hi": "Sharda Society"
+  },
+  "Shardaben Hospital": {
+    "en": "Shardaben Hospital",
+    "gu": "Shardaben Hospital",
+    "hi": "Shardaben Hospital"
+  },
+  "Shardanagar": {
+    "en": "Shardanagar",
+    "gu": "Shardanagar",
+    "hi": "Shardanagar"
+  },
+  "Shitalchhaya Society": {
+    "en": "Shitalchhaya Society",
+    "gu": "Shitalchhaya Society",
+    "hi": "Shitalchhaya Society"
+  },
+  "Shivam Awas": {
+    "en": "Shivam Awas",
+    "gu": "Shivam Awas",
+    "hi": "Shivam Awas"
+  },
+  "Shivshakti Nagar (Jivraj)": {
+    "en": "Shivshakti Nagar (Jivraj)",
+    "gu": "Shivshakti Nagar (Jivraj)",
+    "hi": "Shivshakti Nagar (Jivraj)"
+  },
+  "Shree Naran Dham": {
+    "en": "Shree Naran Dham",
+    "gu": "Shree Naran Dham",
+    "hi": "Shree Naran Dham"
+  },
+  "Shree Valinath Chowk": {
+    "en": "Shree Valinath Chowk",
+    "gu": "Shree Valinath Chowk",
+    "hi": "Shree Valinath Chowk"
+  },
+  "Shreyanshnath Society": {
+    "en": "Shreyanshnath Society",
+    "gu": "Shreyanshnath Society",
+    "hi": "Shreyanshnath Society"
+  },
+  "Shreyas": {
+    "en": "Shreyas",
+    "gu": "Shreyas",
+    "hi": "Shreyas"
+  },
+  "Shri Ambe Mata Nu Mandir": {
+    "en": "Shri Ambe Mata Nu Mandir",
+    "gu": "Shri Ambe Mata Nu Mandir",
+    "hi": "Shri Ambe Mata Nu Mandir"
+  },
+  "Shri Ashrambapu Ashram Cross Road": {
+    "en": "Shri Ashrambapu Ashram Cross Road",
+    "gu": "Shri Ashrambapu Ashram Cross Road",
+    "hi": "Shri Ashrambapu Ashram Cross Road"
+  },
+  "Shri V.K.Vidyalay": {
+    "en": "Shri V.K.Vidyalay",
+    "gu": "Shri V.K.Vidyalay",
+    "hi": "Shri V.K.Vidyalay"
+  },
+  "Shrikunj Society": {
+    "en": "Shrikunj Society",
+    "gu": "Shrikunj Society",
+    "hi": "Shrikunj Society"
+  },
+  "Shrimali Society": {
+    "en": "Shrimali Society",
+    "gu": "Shrimali Society",
+    "hi": "Shrimali Society"
+  },
+  "Shrinagar Mill (Gurudwara)": {
+    "en": "Shrinagar Mill (Gurudwara)",
+    "gu": "Shrinagar Mill (Gurudwara)",
+    "hi": "Shrinagar Mill (Gurudwara)"
+  },
+  "Shrinagar Mills": {
+    "en": "Shrinagar Mills",
+    "gu": "Shrinagar Mills",
+    "hi": "Shrinagar Mills"
+  },
+  "Shrinath Apartment": {
+    "en": "Shrinath Apartment",
+    "gu": "Shrinath Apartment",
+    "hi": "Shrinath Apartment"
+  },
+  "Shriniketan Society": {
+    "en": "Shriniketan Society",
+    "gu": "Shriniketan Society",
+    "hi": "Shriniketan Society"
+  },
+  "Shubham Society": {
+    "en": "Shubham Society",
+    "gu": "Shubham Society",
+    "hi": "Shubham Society"
+  },
+  "Shuddodhannagar": {
+    "en": "Shuddodhannagar",
+    "gu": "Shuddodhannagar",
+    "hi": "Shuddodhannagar"
+  },
+  "Shukan Complex": {
+    "en": "Shukan Complex",
+    "gu": "Shukan Complex",
+    "hi": "Shukan Complex"
+  },
+  "Shyam-36": {
+    "en": "Shyam-36",
+    "gu": "Shyam-36",
+    "hi": "Shyam-36"
+  },
+  "Shyamal Char Rasta": {
+    "en": "Shyamal Char Rasta",
+    "gu": "Shyamal Char Rasta",
+    "hi": "Shyamal Char Rasta"
+  },
+  "Shyamal Cross": {
+    "en": "Shyamal Cross",
+    "gu": "Shyamal Cross",
+    "hi": "Shyamal Cross"
+  },
+  "Silp Siddhi Flats": {
+    "en": "Silp Siddhi Flats",
+    "gu": "Silp Siddhi Flats",
+    "hi": "Silp Siddhi Flats"
+  },
+  "Society ni chali": {
+    "en": "Society ni chali",
+    "gu": "Society ni chali",
+    "hi": "Society ni chali"
+  },
+  "Soham Tower": {
+    "en": "Soham Tower",
+    "gu": "Soham Tower",
+    "hi": "Soham Tower"
+  },
+  "Sola Cross Road": {
+    "en": "Sola Cross Road",
+    "gu": "Sola Cross Road",
+    "hi": "Sola Cross Road"
+  },
+  "Somnath Society": {
+    "en": "Somnath Society",
+    "gu": "Somnath Society",
+    "hi": "Somnath Society"
+  },
+  "South Bopal BRTS Terminus": {
+    "en": "South Bopal BRTS Terminus",
+    "gu": "South Bopal BRTS Terminus",
+    "hi": "South Bopal BRTS Terminus"
+  },
+  "Sports Park": {
+    "en": "Sports Park",
+    "gu": "Sports Park",
+    "hi": "Sports Park"
+  },
+  "St. Joseph School": {
+    "en": "St. Joseph School",
+    "gu": "St. Joseph School",
+    "hi": "St. Joseph School"
+  },
+  "St. Xaviers College": {
+    "en": "St. Xaviers College",
+    "gu": "St. Xaviers College",
+    "hi": "St. Xaviers College"
+  },
+  "St. Xaviers Corner": {
+    "en": "St. Xaviers Corner",
+    "gu": "St. Xaviers Corner",
+    "hi": "St. Xaviers Corner"
+  },
+  "St. Xaviers High School": {
+    "en": "St. Xaviers High School",
+    "gu": "St. Xaviers High School",
+    "hi": "St. Xaviers High School"
+  },
+  "Subhash Bridge Circle": {
+    "en": "Subhash Bridge Circle",
+    "gu": "Subhash Bridge Circle",
+    "hi": "Subhash Bridge Circle"
+  },
+  "Subhash Chowk": {
+    "en": "Subhash Chowk",
+    "gu": "Subhash Chowk",
+    "hi": "Subhash Chowk"
+  },
+  "Suchita Apartment (Vijay Char Rasta)": {
+    "en": "Suchita Apartment (Vijay Char Rasta)",
+    "gu": "Suchita Apartment (Vijay Char Rasta)",
+    "hi": "Suchita Apartment (Vijay Char Rasta)"
+  },
+  "Sukharam Mahadev": {
+    "en": "Sukharam Mahadev",
+    "gu": "Sukharam Mahadev",
+    "hi": "Sukharam Mahadev"
+  },
+  "Sukhipura": {
+    "en": "Sukhipura",
+    "gu": "Sukhipura",
+    "hi": "Sukhipura"
+  },
+  "Sukhramnagar": {
+    "en": "Sukhramnagar",
+    "gu": "Sukhramnagar",
+    "hi": "Sukhramnagar"
+  },
+  "Sukhramnagar Pani ni Tanki": {
+    "en": "Sukhramnagar Pani ni Tanki",
+    "gu": "Sukhramnagar Pani ni Tanki",
+    "hi": "Sukhramnagar Pani ni Tanki"
+  },
+  "Sundaram Awas Yojana (Vastral)": {
+    "en": "Sundaram Awas Yojana (Vastral)",
+    "gu": "Sundaram Awas Yojana (Vastral)",
+    "hi": "Sundaram Awas Yojana (Vastral)"
+  },
+  "Sundarnagar (Sundarvan Society)": {
+    "en": "Sundarnagar (Sundarvan Society)",
+    "gu": "Sundarnagar (Sundarvan Society)",
+    "hi": "Sundarnagar (Sundarvan Society)"
+  },
+  "Surabhi Society (Nirant Chokdi)": {
+    "en": "Surabhi Society (Nirant Chokdi)",
+    "gu": "Surabhi Society (Nirant Chokdi)",
+    "hi": "Surabhi Society (Nirant Chokdi)"
+  },
+  "Surdhara Bunglows": {
+    "en": "Surdhara Bunglows",
+    "gu": "Surdhara Bunglows",
+    "hi": "Surdhara Bunglows"
+  },
+  "Surdhara Circle": {
+    "en": "Surdhara Circle",
+    "gu": "Surdhara Circle",
+    "hi": "Surdhara Circle"
+  },
+  "Surdhara Society": {
+    "en": "Surdhara Society",
+    "gu": "Surdhara Society",
+    "hi": "Surdhara Society"
+  },
+  "Sureliya Estate": {
+    "en": "Sureliya Estate",
+    "gu": "Sureliya Estate",
+    "hi": "Sureliya Estate"
+  },
+  "Suryoday Society": {
+    "en": "Suryoday Society",
+    "gu": "Suryoday Society",
+    "hi": "Suryoday Society"
+  },
+  "Suvarna Bunglows": {
+    "en": "Suvarna Bunglows",
+    "gu": "Suvarna Bunglows",
+    "hi": "Suvarna Bunglows"
+  },
+  "Swaminarayan Baug": {
+    "en": "Swaminarayan Baug",
+    "gu": "Swaminarayan Baug",
+    "hi": "Swaminarayan Baug"
+  },
+  "Swaminarayan Gurukul": {
+    "en": "Swaminarayan Gurukul",
+    "gu": "Swaminarayan Gurukul",
+    "hi": "Swaminarayan Gurukul"
+  },
+  "Swaminarayan Mandir (Maninagar)": {
+    "en": "Swaminarayan Mandir (Maninagar)",
+    "gu": "Swaminarayan Mandir (Maninagar)",
+    "hi": "Swaminarayan Mandir (Maninagar)"
+  },
+  "Swaminarayan Mandir (Nava Vadaj)": {
+    "en": "Swaminarayan Mandir (Nava Vadaj)",
+    "gu": "Swaminarayan Mandir (Nava Vadaj)",
+    "hi": "Swaminarayan Mandir (Nava Vadaj)"
+  },
+  "Swaminarayan Mandir (Shahibag)": {
+    "en": "Swaminarayan Mandir (Shahibag)",
+    "gu": "Swaminarayan Mandir (Shahibag)",
+    "hi": "Swaminarayan Mandir (Shahibag)"
+  },
+  "Swaminarayan Park": {
+    "en": "Swaminarayan Park",
+    "gu": "Swaminarayan Park",
+    "hi": "Swaminarayan Park"
+  },
+  "Swastik Char Rasta": {
+    "en": "Swastik Char Rasta",
+    "gu": "Swastik Char Rasta",
+    "hi": "Swastik Char Rasta"
+  },
+  "Swastik Industries": {
+    "en": "Swastik Industries",
+    "gu": "Swastik Industries",
+    "hi": "Swastik Industries"
+  },
+  "Swastik Society": {
+    "en": "Swastik Society",
+    "gu": "Swastik Society",
+    "hi": "Swastik Society"
+  },
+  "Swati Society": {
+    "en": "Swati Society",
+    "gu": "Swati Society",
+    "hi": "Swati Society"
+  },
+  "Tagor Park": {
+    "en": "Tagor Park",
+    "gu": "Tagor Park",
+    "hi": "Tagor Park"
+  },
+  "Takshashila Vidyalay (Sahyog Vidyalay)": {
+    "en": "Takshashila Vidyalay (Sahyog Vidyalay)",
+    "gu": "Takshashila Vidyalay (Sahyog Vidyalay)",
+    "hi": "Takshashila Vidyalay (Sahyog Vidyalay)"
+  },
+  "Talavdi (Thaltej)": {
+    "en": "Talavdi (Thaltej)",
+    "gu": "Talavdi (Thaltej)",
+    "hi": "Talavdi (Thaltej)"
+  },
+  "Tapovan Circle": {
+    "en": "Tapovan Circle",
+    "gu": "Tapovan Circle",
+    "hi": "Tapovan Circle"
+  },
+  "Tata Motors (Bacha Motors)": {
+    "en": "Tata Motors (Bacha Motors)",
+    "gu": "Tata Motors (Bacha Motors)",
+    "hi": "Tata Motors (Bacha Motors)"
+  },
+  "Telephone Exchange (Cg Road)": {
+    "en": "Telephone Exchange (Cg Road)",
+    "gu": "Telephone Exchange (Cg Road)",
+    "hi": "Telephone Exchange (Cg Road)"
+  },
+  "Telephone Exchange (Vasna)": {
+    "en": "Telephone Exchange (Vasna)",
+    "gu": "Telephone Exchange (Vasna)",
+    "hi": "Telephone Exchange (Vasna)"
+  },
+  "Telephone Training Centre (Ambawadi)": {
+    "en": "Telephone Training Centre (Ambawadi)",
+    "gu": "Telephone Training Centre (Ambawadi)",
+    "hi": "Telephone Training Centre (Ambawadi)"
+  },
+  "Thakorvas": {
+    "en": "Thakorvas",
+    "gu": "Thakorvas",
+    "hi": "Thakorvas"
+  },
+  "Thaltej": {
+    "en": "Thaltej",
+    "gu": "Thaltej",
+    "hi": "Thaltej"
+  },
+  "Thaltej Char Rasta": {
+    "en": "Thaltej Char Rasta",
+    "gu": "Thaltej Char Rasta",
+    "hi": "Thaltej Char Rasta"
+  },
+  "Thaltej Gam": {
+    "en": "Thaltej Gam",
+    "gu": "Thaltej Gam",
+    "hi": "Thaltej Gam"
+  },
+  "Thaltej Metro Station": {
+    "en": "Thaltej Metro Station",
+    "gu": "Thaltej Metro Station",
+    "hi": "Thaltej Metro Station"
+  },
+  "Thaltej-Shilaj Railway Over Bridge": {
+    "en": "Thaltej-Shilaj Railway Over Bridge",
+    "gu": "Thaltej-Shilaj Railway Over Bridge",
+    "hi": "Thaltej-Shilaj Railway Over Bridge"
+  },
+  "The Arena (Abad Dairy)": {
+    "en": "The Arena (Abad Dairy)",
+    "gu": "The Arena (Abad Dairy)",
+    "hi": "The Arena (Abad Dairy)"
+  },
+  "Thirupurnagar Society": {
+    "en": "Thirupurnagar Society",
+    "gu": "Thirupurnagar Society",
+    "hi": "Thirupurnagar Society"
+  },
+  "Tilakbag": {
+    "en": "Tilakbag",
+    "gu": "Tilakbag",
+    "hi": "Tilakbag"
+  },
+  "Tin Darwaja": {
+    "en": "Tin Darwaja",
+    "gu": "Tin Darwaja",
+    "hi": "Tin Darwaja"
+  },
+  "Topi Mill": {
+    "en": "Topi Mill",
+    "gu": "Topi Mill",
+    "hi": "Topi Mill"
+  },
+  "Triveni Park": {
+    "en": "Triveni Park",
+    "gu": "Triveni Park",
+    "hi": "Triveni Park"
+  },
+  "Tulsishyam Society": {
+    "en": "Tulsishyam Society",
+    "gu": "Tulsishyam Society",
+    "hi": "Tulsishyam Society"
+  },
+  "Ujala Circle(Sarkhej RailwayOverbridge)": {
+    "en": "Ujala Circle(Sarkhej RailwayOverbridge)",
+    "gu": "Ujala Circle(Sarkhej RailwayOverbridge)",
+    "hi": "Ujala Circle(Sarkhej RailwayOverbridge)"
+  },
+  "Umang Park Society": {
+    "en": "Umang Park Society",
+    "gu": "Umang Park Society",
+    "hi": "Umang Park Society"
+  },
+  "University": {
+    "en": "University",
+    "gu": "University",
+    "hi": "University"
+  },
+  "University Granth Nirman Board": {
+    "en": "University Granth Nirman Board",
+    "gu": "University Granth Nirman Board",
+    "hi": "University Granth Nirman Board"
+  },
+  "Usmanpura": {
+    "en": "Usmanpura",
+    "gu": "Usmanpura",
+    "hi": "Usmanpura"
+  },
+  "Usmanpura Gam": {
+    "en": "Usmanpura Gam",
+    "gu": "Usmanpura Gam",
+    "hi": "Usmanpura Gam"
+  },
+  "V.S. Hospital": {
+    "en": "V.S. Hospital",
+    "gu": "V.S. Hospital",
+    "hi": "V.S. Hospital"
+  },
+  "Vadaj": {
+    "en": "Vadaj",
+    "gu": "Vadaj",
+    "hi": "Vadaj"
+  },
+  "Vadaj Metro Station": {
+    "en": "Vadaj Metro Station",
+    "gu": "Vadaj Metro Station",
+    "hi": "Vadaj Metro Station"
+  },
+  "Vaishali Township": {
+    "en": "Vaishali Township",
+    "gu": "Vaishali Township",
+    "hi": "Vaishali Township"
+  },
+  "Valinath Chowk": {
+    "en": "Valinath Chowk",
+    "gu": "Valinath Chowk",
+    "hi": "Valinath Chowk"
+  },
+  "Vallabhsadan": {
+    "en": "Vallabhsadan",
+    "gu": "Vallabhsadan",
+    "hi": "Vallabhsadan"
+  },
+  "Vallabhsadan Cross road": {
+    "en": "Vallabhsadan Cross road",
+    "gu": "Vallabhsadan Cross road",
+    "hi": "Vallabhsadan Cross road"
+  },
+  "Vanijya Bhavan": {
+    "en": "Vanijya Bhavan",
+    "gu": "Vanijya Bhavan",
+    "hi": "Vanijya Bhavan"
+  },
+  "Vanraj society": {
+    "en": "Vanraj society",
+    "gu": "Vanraj society",
+    "hi": "Vanraj society"
+  },
+  "Vastral": {
+    "en": "Vastral",
+    "gu": "Vastral",
+    "hi": "Vastral"
+  },
+  "Vastral Gam": {
+    "en": "Vastral Gam",
+    "gu": "Vastral Gam",
+    "hi": "Vastral Gam"
+  },
+  "Vastral Gam(Metro Station)": {
+    "en": "Vastral Gam(Metro Station)",
+    "gu": "Vastral Gam(Metro Station)",
+    "hi": "Vastral Gam(Metro Station)"
+  },
+  "Vastral Metro Station": {
+    "en": "Vastral Metro Station",
+    "gu": "Vastral Metro Station",
+    "hi": "Vastral Metro Station"
+  },
+  "Vastral Talav": {
+    "en": "Vastral Talav",
+    "gu": "Vastral Talav",
+    "hi": "Vastral Talav"
+  },
+  "Vastrapur Railway Crossing": {
+    "en": "Vastrapur Railway Crossing",
+    "gu": "Vastrapur Railway Crossing",
+    "hi": "Vastrapur Railway Crossing"
+  },
+  "Vatva Railway Colony": {
+    "en": "Vatva Railway Colony",
+    "gu": "Vatva Railway Colony",
+    "hi": "Vatva Railway Colony"
+  },
+  "Vatva Railway Crossing": {
+    "en": "Vatva Railway Crossing",
+    "gu": "Vatva Railway Crossing",
+    "hi": "Vatva Railway Crossing"
+  },
+  "Vatva Railway Fatak": {
+    "en": "Vatva Railway Fatak",
+    "gu": "Vatva Railway Fatak",
+    "hi": "Vatva Railway Fatak"
+  },
+  "Vatva Railway Station": {
+    "en": "Vatva Railway Station",
+    "gu": "Vatva Railway Station",
+    "hi": "Vatva Railway Station"
+  },
+  "Vidyanagar High School (Usmanpura)": {
+    "en": "Vidyanagar High School (Usmanpura)",
+    "gu": "Vidyanagar High School (Usmanpura)",
+    "hi": "Vidyanagar High School (Usmanpura)"
+  },
+  "Vijalighar": {
+    "en": "Vijalighar",
+    "gu": "Vijalighar",
+    "hi": "Vijalighar"
+  },
+  "Vijaynagar": {
+    "en": "Vijaynagar",
+    "gu": "Vijaynagar",
+    "hi": "Vijaynagar"
+  },
+  "Vijaynagar Metro station": {
+    "en": "Vijaynagar Metro station",
+    "gu": "Vijaynagar Metro station",
+    "hi": "Vijaynagar Metro station"
+  },
+  "Vijaynagar Railway Crossing": {
+    "en": "Vijaynagar Railway Crossing",
+    "gu": "Vijaynagar Railway Crossing",
+    "hi": "Vijaynagar Railway Crossing"
+  },
+  "Vikas Gruh": {
+    "en": "Vikas Gruh",
+    "gu": "Vikas Gruh",
+    "hi": "Vikas Gruh"
+  },
+  "Vinay Vidya Mandir": {
+    "en": "Vinay Vidya Mandir",
+    "gu": "Vinay Vidya Mandir",
+    "hi": "Vinay Vidya Mandir"
+  },
+  "Visat -Gandhinagar Junction": {
+    "en": "Visat -Gandhinagar Junction",
+    "gu": "Visat -Gandhinagar Junction",
+    "hi": "Visat -Gandhinagar Junction"
+  },
+  "Visat Gandhinagar Junction BRT": {
+    "en": "Visat Gandhinagar Junction BRT",
+    "gu": "Visat Gandhinagar Junction BRT",
+    "hi": "Visat Gandhinagar Junction BRT"
+  },
+  "Vishala Circle": {
+    "en": "Vishala Circle",
+    "gu": "Vishala Circle",
+    "hi": "Vishala Circle"
+  },
+  "Vishnunagar (Kasturbanagar)": {
+    "en": "Vishnunagar (Kasturbanagar)",
+    "gu": "Vishnunagar (Kasturbanagar)",
+    "hi": "Vishnunagar (Kasturbanagar)"
+  },
+  "Vishramnagar": {
+    "en": "Vishramnagar",
+    "gu": "Vishramnagar",
+    "hi": "Vishramnagar"
+  },
+  "Vishvakarma Engineering College": {
+    "en": "Vishvakarma Engineering College",
+    "gu": "Vishvakarma Engineering College",
+    "hi": "Vishvakarma Engineering College"
+  },
+  "Vishwakarma College": {
+    "en": "Vishwakarma College",
+    "gu": "Vishwakarma College",
+    "hi": "Vishwakarma College"
+  },
+  "Vishwakarma Mandir": {
+    "en": "Vishwakarma Mandir",
+    "gu": "Vishwakarma Mandir",
+    "hi": "Vishwakarma Mandir"
+  },
+  "Vishwakarma Society": {
+    "en": "Vishwakarma Society",
+    "gu": "Vishwakarma Society",
+    "hi": "Vishwakarma Society"
+  },
+  "Vishwamitra Society": {
+    "en": "Vishwamitra Society",
+    "gu": "Vishwamitra Society",
+    "hi": "Vishwamitra Society"
+  },
+  "Vivekanand Circle": {
+    "en": "Vivekanand Circle",
+    "gu": "Vivekanand Circle",
+    "hi": "Vivekanand Circle"
+  },
+  "Vyaswadi": {
+    "en": "Vyaswadi",
+    "gu": "Vyaswadi",
+    "hi": "Vyaswadi"
+  },
+  "Vyayam Vidyalay": {
+    "en": "Vyayam Vidyalay",
+    "gu": "Vyayam Vidyalay",
+    "hi": "Vyayam Vidyalay"
+  },
+  "Zakariya Masjid": {
+    "en": "Zakariya Masjid",
+    "gu": "Zakariya Masjid",
+    "hi": "Zakariya Masjid"
+  },
+  "Zaverivad": {
+    "en": "Zaverivad",
+    "gu": "Zaverivad",
+    "hi": "Zaverivad"
+  },
+  "Zoo Kankariya": {
+    "en": "Zoo Kankariya",
+    "gu": "Zoo Kankariya",
+    "hi": "Zoo Kankariya"
+  },
+  "varsoda ni chali": {
+    "en": "varsoda ni chali",
+    "gu": "varsoda ni chali",
+    "hi": "varsoda ni chali"
+  }
+}

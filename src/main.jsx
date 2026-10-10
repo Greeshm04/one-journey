@@ -2,6 +2,23 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import './styles.css';
 import demoData from './data/journey_demo_data.json';
+import {LANGUAGES, t, fmtDuration, legLabel} from './i18n.js';
+
+/** Lazy-loaded stop name translations — populated once on first non-English render. */
+let stopNamesCache = null;
+async function loadStopNames() {
+  if (!stopNamesCache) {
+    const mod = await import('./data/stop_names_i18n.json');
+    stopNamesCache = mod.default;
+  }
+  return stopNamesCache;
+}
+
+/** Translate a stop/station name using the pre-built i18n map. */
+function stopName(map, lang, name) {
+  if (!map || lang === 'en') return name;
+  return map[name]?.[lang] ?? name;
+}
 
 const WALK_SPEED = 12;
 const PLACE_FALLBACK = [
@@ -30,13 +47,11 @@ function normalizeData(data){
   const byIndex=nodes;
   const edges=[];
 
-  // Bus edges are supplied as directed stop-to-stop segments.
   for(const e of (data.busEdges||[])){
     const a=byIndex[e[0]],b=byIndex[e[1]];
     if(a&&b) edges.push([a.id,b.id,e[2],'bus',e[3],e[4]]);
   }
 
-  // Build a complete Metro graph from the published station ordering.
   const metroLine=Object.fromEntries(metroNodes.map(n=>[n.id,n.line]));
   const lineIds=[...new Set(metroNodes.flatMap(n=>(n.line||'').split(';').filter(Boolean)))];
   for(const line of lineIds){
@@ -49,15 +64,11 @@ function normalizeData(data){
     }
   }
 
-  // Preserve the supplied Metro segment estimates as well.
   for(const e of (data.metroEdges||[])){
     const line=metroLine[e[0]]||'Metro';
     edges.push([e[0],e[1],e[2],'metro',line,line]);
   }
 
-  // Add walking links between nearby bus and Metro stops. This is the missing
-  // multimodal connection in the raw demo graph: without these links a bus
-  // journey can never transfer to Metro (or vice versa).
   const buses=nodes.filter(n=>Number.isFinite(n.lat)&&Number.isFinite(n.lon));
   const metros=metroNodes.filter(n=>Number.isFinite(n.lat)&&Number.isFinite(n.lon));
   for(const b of buses){
@@ -73,6 +84,7 @@ function normalizeData(data){
 
   return {...data,nodes:all,edges,places:PLACE_FALLBACK};
 }
+
 function createRouter(raw){
   const data=normalizeData(raw);
   const N=data.nodes||[];
@@ -83,7 +95,6 @@ function createRouter(raw){
     const raw=String(input||'').trim();
     if(raw==='My current location'&&gps)return {name:raw,...gps};
     const q=norm(raw); if(!q)return null;
-    // Exact station/stop matches always win over a similarly named generic place.
     const exactNode=N.find(n=>norm(n.name)===q || norm(n.name.replace(/\s+(metro\s+)?station$/i,''))===q);
     if(exactNode)return {name:exactNode.name,lat:exactNode.lat,lon:exactNode.lon,node:exactNode};
     let best=null,bs=0;
@@ -142,21 +153,18 @@ function createRouter(raw){
       const walkDisplay=legs.filter(e=>e[3]==='walk').reduce((sum,e)=>sum+e[2],0);
       let grouped=[];
       for(const e of legs){
-        const type=e[3],label=type==='metro'?'Metro':type==='walk'?'Walk':(e[4]==='AJL'?'BRTS':e[4]==='GTSL'?'GTSL':'AMTS'),route=e[5];
+        const type=e[3],typeKey=type==='metro'?'metro':type==='walk'?'walk':(e[4]==='AJL'?'brts':e[4]==='GTSL'?'gtsl':'amts'),route=e[5];
         const last=grouped.at(-1);
         if(last&&last.type===type&&last.route===route){last.mins+=e[2];last.to=byId[e[1]]?.name||e[1]}
-        else grouped.push({type,label,route,mins:e[2],from:byId[e[0]]?.name||e[0],to:byId[e[1]]?.name||e[1]});
+        else grouped.push({type,typeKey,route,mins:e[2],from:byId[e[0]]?.name||e[0],to:byId[e[1]]?.name||e[1]});
       }
       const transfers=Math.max(0,grouped.filter(x=>x.type!=='walk').length-1);
       const score=bestGoal.total+(pref==='walk'?walkScore*1.8:pref==='transfer'?transfers*8:pref==='cheap'?transfers*3:0);
       results.push({score,total:Math.round(bestGoal.total),walk:Math.round(walkDisplay),transfers,legs:grouped,source:s.id});
     }
-    // Several nearby access stops can yield the same itinerary; retain the best unique ones.
     results.sort((x,y)=>x.score-y.score);
     const unique=[],seen=new Set();
     for(const r of results){
-      // Deduplicate on transit-only legs so that routes with the same metro/bus journey
-      // but a slightly different access walk are not shown as separate options.
       const transitLegs=r.legs.filter(l=>l.type!=='walk');
       const sig=transitLegs.length
         ? transitLegs.map(l=>`${l.type}:${l.route}:${l.from}>${l.to}`).join('|')
@@ -169,43 +177,241 @@ function createRouter(raw){
   return {findRoutes,places,N};
 }
 
+function LanguageSwitcher({lang, setLang}){
+  return (
+    <div className="lang-switcher">
+      {LANGUAGES.map(l=>(
+        <button
+          key={l.code}
+          className={lang===l.code?'active':''}
+          onClick={()=>setLang(l.code)}
+          title={l.name}
+          aria-label={l.name}
+        >{l.label}</button>
+      ))}
+    </div>
+  );
+}
+
 function App(){
-  const [data]=useState(demoData),[from,setFrom]=useState(''),[to,setTo]=useState(''),[pref,setPref]=useState('fast');
-  const [results,setResults]=useState([]),[status,setStatus]=useState('Choose an origin and destination');
-  const [prompt,setPrompt]=useState(''),[insight,setInsight]=useState(''),[gps,setGps]=useState(null),[error,setError]=useState('');
-  const [activeChip,setActiveChip]=useState(null),[loading,setLoading]=useState(false);
+  const [data]=useState(demoData);
+  const [from,setFrom]=useState('');
+  const [to,setTo]=useState('');
+  const [pref,setPref]=useState('fast');
+  const [results,setResults]=useState([]);
+  const [lang,setLang]=useState(()=>localStorage.getItem('oj_lang')||'en');
+  const T=(key,...args)=>t(lang,key,...args);
+  const [status,setStatus]=useState('');
+  const [prompt,setPrompt]=useState('');
+  const [insight,setInsight]=useState('');
+  const [gps,setGps]=useState(null);
+  const [error,setError]=useState('');
+  const [activeChip,setActiveChip]=useState(null);
+  const [loading,setLoading]=useState(false);
+  const [stopNamesMap,setStopNamesMap]=useState(null);
+
+  // Persist language choice and lazy-load stop name translations when needed
+  useEffect(()=>{
+    localStorage.setItem('oj_lang',lang);
+    if(lang!=='en'&&!stopNamesCache){
+      loadStopNames().then(map=>setStopNamesMap(map));
+    } else if(stopNamesCache){
+      setStopNamesMap(stopNamesCache);
+    }
+  },[lang]);
+
+  // Update default status text when language changes
+  useEffect(()=>{
+    setStatus(prev=>{
+      // Only update if it's still the default (not a result count)
+      if(!prev||prev===t('en','statusDefault')||prev===t('gu','statusDefault')||prev===t('hi','statusDefault')){
+        return T('statusDefault');
+      }
+      return prev;
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[lang]);
+
   const router=useMemo(()=>data?createRouter(data):null,[data]);
   const stats=data?.meta||{};
-  const run=(f=from,t=to,p=pref)=>{
+
+  const run=(f=from,t_=to,p=pref)=>{
     if(!router)return;
-    if(!f||!t){setResults([]);setStatus('Enter both locations or choose an example');return}
+    if(!f||!t_){setResults([]);setStatus(T('statusEnterBoth'));return}
     setLoading(true);
     setTimeout(()=>{
-      const r=router.findRoutes(f,t,p,gps);
+      const r=router.findRoutes(f,t_,p,gps);
       setResults(r);
-      setStatus(`${r.length} option${r.length===1?'':'s'} · offline routing`);
+      setStatus(T('statusOptions',r.length));
       setLoading(false);
     },0);
   };
-  const gpsClick=()=>{if(!navigator.geolocation){setError('Geolocation is not supported by this browser.');return}navigator.geolocation.getCurrentPosition(pos=>{setGps({lat:pos.coords.latitude,lon:pos.coords.longitude});setFrom('My current location');setStatus('GPS location captured');},()=>setError('Location permission was not granted.'))};
-  const examples=[['Gandhinagar Sector 21','GIFT City'],['Gandhinagar Sector 21','CG Road'],['Kalupur Railway Station','GIFT City'],['Ahmedabad Airport','GIFT City']];
-  const interpret=()=>{const n=norm(prompt);let dest='GIFT City',p='fast';for(const x of router?.places||[])if(n.includes(norm(x[0])))dest=x[0];if(/less walk|little walk|minimum walking/.test(n))p='walk';if(/fewest|minimum transfers/.test(n))p='transfer';const tm=prompt.match(/before\s+(\d{1,2})(?::(\d{2}))?/);setTo(dest);setPref(p);setInsight(<><b>Interpreted request</b><br/>Destination: {dest}<br/>Preference: {p==='walk'?'less walking':p==='transfer'?'fewer transfers':'fastest'}{tm?<><br/>Arrival target: {tm[1]}{tm[2]?':'+tm[2]:''}</>:<><br/>Time target not yet used for ranking.</>}<br/><br/><span>This local intent parser is a stand-in for the future LLM layer.</span></>)};
-  return <main className="app"><header className="hero"><div><div className="eyebrow">Responsive React prototype · Ahmedabad & Gandhinagar</div><h1>One Journey.<br/><em>Four networks.</em></h1><p>Plan across <b>Metro + AMTS + BRTS + GTSL</b> from one place. The routing core is deterministic and works from the supplied offline transit dataset.</p></div><div className="live-badge"><i></i>Offline timetable engine</div></header>
-    {error&&<div className="error">{error}<button onClick={()=>setError('')}>×</button></div>}
-    <section className="search-card"><div className="search-grid"><Field label="From" value={from} onChange={v=>{setFrom(v);setActiveChip(null)}} placeholder="Sector 21, GIFT City, current location" action={gpsClick}/><Field label="To" value={to} onChange={v=>{setTo(v);setActiveChip(null)}} placeholder="CG Road, Infocity, Airport"/><button className="primary search-button" onClick={()=>run()}>Find best journey <span>→</span></button></div>
-      <div className="chips">{examples.map(([a,b],i)=><button key={a+b} className={activeChip===i?'active':''} onClick={()=>{setActiveChip(i);setFrom(a);setTo(b);run(a,b,pref)}}>{a.replace('Gandhinagar ','')} → {b}</button>)}</div>
-      <div className="preferences"><span>Optimize for</span>{[['fast','Fastest'],['walk','Less walking'],['transfer','Fewer transfers'],['cheap','Lower fare*']].map(([v,l])=><button className={pref===v?'selected':''} key={v} onClick={()=>{setPref(v);if(from&&to)run(from,to,v)}}>{l}</button>)}<small>* Fare comparison is limited by the published prototype dataset.</small></div>
-    </section>
-    <div className="content"><section className="journeys"><div className="section-head"><h2>Recommended journeys</h2><span>{loading?'Calculating…':status}</span></div>{loading?<div className="calculating"><div className="calc-bar"><div className="calc-fill"/></div><span>Finding best routes…</span></div>:!results.length?<div className="empty"><div className="empty-icon">↗</div><b>Start with a journey</b><p>Try one of the examples above. The router considers walking access, route headways, transfers and the supplied Metro timetable structure.</p></div>:results.map((r,i)=><RouteCard key={i} route={r} best={i===0}/>)}</section>
-      <aside><div className="assistant"><div className="assistant-kicker">AI LAYER · PROTOTYPE</div><h3>Describe your journey</h3><p>Use plain language such as “Reach GIFT City before 9, little walking”.</p><div className="ai-row"><input value={prompt} onChange={e=>setPrompt(e.target.value)} onKeyDown={e=>e.key==='Enter'&&interpret()} placeholder="Reach GIFT City before 9…"/><button onClick={interpret}>Interpret</button></div>{insight&&<div className="insight">{insight}</div>}</div>
-        <div className="stats"><Stat n={stats.selectedBusStops||619} t="bus stops"/><Stat n={stats.busEdges||8529} t="bus connections"/><Stat n={stats.metroStops||53} t="Metro stations"/><Stat n="4" t="networks"/></div>
-        <div className="boundary"><b>Prototype boundary</b><p>Bus routing uses the supplied GTFS stop sequences with median segment times and route headways. Metro routing uses the supplied GMRC timetable data. This is schedule-based, not live vehicle tracking.</p></div>
-      </aside></div>
-    <footer>Built as a responsive React/Vite prototype. GPS is requested only after user permission. The next routing iteration can add true time-dependent departures for “leave at 8:15” and “arrive before 9”.</footer>
-  </main>
+
+  const gpsClick=()=>{
+    if(!navigator.geolocation){setError(T('statusGpsUnsupported'));return}
+    navigator.geolocation.getCurrentPosition(
+      pos=>{setGps({lat:pos.coords.latitude,lon:pos.coords.longitude});setFrom('My current location');setStatus(T('statusGps'));},
+      ()=>setError(T('statusGpsError'))
+    );
+  };
+
+  const examples=[
+    ['Gandhinagar Sector 21','GIFT City'],
+    ['Gandhinagar Sector 21','CG Road'],
+    ['Kalupur Railway Station','GIFT City'],
+    ['Ahmedabad Airport','GIFT City']
+  ];
+
+  const interpret=()=>{
+    const n=norm(prompt);
+    let dest='GIFT City',p='fast';
+    for(const x of router?.places||[])if(n.includes(norm(x[0])))dest=x[0];
+    if(/less walk|little walk|minimum walking/.test(n))p='walk';
+    if(/fewest|minimum transfers/.test(n))p='transfer';
+    const tm=prompt.match(/before\s+(\d{1,2})(?::(\d{2}))?/);
+    setTo(dest);
+    setPref(p);
+    const prefLabel=p==='walk'?T('insightPrefWalk'):p==='transfer'?T('insightPrefTransfer'):T('insightPrefFast');
+    setInsight(
+      <><b>{T('insightTitle')}</b><br/>
+      {T('insightDest')}: {dest}<br/>
+      {T('insightPref')}: {prefLabel}
+      {tm
+        ?<><br/>{T('insightArrival')}: {tm[1]}{tm[2]?':'+tm[2]:''}</>
+        :<><br/>{T('insightNoTime')}</>
+      }<br/><br/>
+      <span>{T('insightNote')}</span></>
+    );
+  };
+
+  return (
+    <main className="app">
+      <header className="hero">
+        <div>
+          <div className="eyebrow">{T('eyebrow')}</div>
+          <h1>{T('heroTitle1')}<br/><em>{T('heroTitle2')}</em></h1>
+          <p>{T('heroDesc')}</p>
+        </div>
+        <div className="hero-right">
+          <div className="live-badge"><i></i>{T('offlineBadge')}</div>
+          <LanguageSwitcher lang={lang} setLang={setLang}/>
+        </div>
+      </header>
+
+      {error&&<div className="error">{error}<button onClick={()=>setError('')}>×</button></div>}
+
+      <section className="search-card">
+        <div className="search-grid">
+          <Field label={T('fieldFrom')} value={from} onChange={v=>{setFrom(v);setActiveChip(null)}} placeholder={T('placeholderFrom')} action={gpsClick} gpsBtnLabel={T('gpsBtnLabel')}/>
+          <Field label={T('fieldTo')} value={to} onChange={v=>{setTo(v);setActiveChip(null)}} placeholder={T('placeholderTo')}/>
+          <button className="primary search-button" onClick={()=>run()}>{T('findJourney')} <span>{T('findJourneyArrow')}</span></button>
+        </div>
+        <div className="chips">
+          {examples.map(([a,b],i)=>(
+            <button key={a+b} className={activeChip===i?'active':''} onClick={()=>{setActiveChip(i);setFrom(a);setTo(b);run(a,b,pref)}}>
+              {a.replace('Gandhinagar ','')} → {b}
+            </button>
+          ))}
+        </div>
+        <div className="preferences">
+          <span>{T('optimizeFor')}</span>
+          {[['fast','prefFast'],['walk','prefWalk'],['transfer','prefTransfer'],['cheap','prefCheap']].map(([v,k])=>(
+            <button className={pref===v?'selected':''} key={v} onClick={()=>{setPref(v);if(from&&to)run(from,to,v)}}>{T(k)}</button>
+          ))}
+          <small>{T('fareNote')}</small>
+        </div>
+      </section>
+
+      <div className="content">
+        <section className="journeys">
+          <div className="section-head">
+            <h2>{T('sectionJourneys')}</h2>
+            <span>{loading?T('calculating'):status||T('statusDefault')}</span>
+          </div>
+          {loading
+            ?<div className="calculating"><div className="calc-bar"><div className="calc-fill"/></div><span>{T('findingRoutes')}</span></div>
+            :!results.length
+              ?<div className="empty">
+                <div className="empty-icon">↗</div>
+                <b>{T('emptyTitle')}</b>
+                <p>{T('emptyDesc')}</p>
+              </div>
+              :results.map((r,i)=><RouteCard key={i} route={r} best={i===0} lang={lang} stopMap={stopNamesMap}/>)
+          }
+        </section>
+
+        <aside>
+          <div className="assistant">
+            <div className="assistant-kicker">{T('aiKicker')}</div>
+            <h3>{T('aiTitle')}</h3>
+            <p>{T('aiDesc')}</p>
+            <div className="ai-row">
+              <input value={prompt} onChange={e=>setPrompt(e.target.value)} onKeyDown={e=>e.key==='Enter'&&interpret()} placeholder={T('aiPlaceholder')}/>
+              <button onClick={interpret}>{T('aiInterpret')}</button>
+            </div>
+            {insight&&<div className="insight">{insight}</div>}
+          </div>
+
+          <div className="stats">
+            <Stat n={stats.selectedBusStops||619} t={T('statBusStops')}/>
+            <Stat n={stats.busEdges||8529} t={T('statBusConn')}/>
+            <Stat n={stats.metroStops||53} t={T('statMetro')}/>
+            <Stat n="4" t={T('statNetworks')}/>
+          </div>
+
+          <div className="boundary">
+            <b>{T('boundaryTitle')}</b>
+            <p>{T('boundaryDesc')}</p>
+          </div>
+        </aside>
+      </div>
+
+      <footer>{T('footer')}</footer>
+    </main>
+  );
 }
-function Field({label,value,onChange,placeholder,action}){return <label className="field"><span>{label}</span><div><input value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder}/>{action&&<button className="gps" onClick={action} title="Use current location">◎ GPS</button>}</div></label>}
-function RouteCard({route,best}){return <article className={'route '+(best?'best':'')}><div className="route-top"><div><span className="route-badge">{best?'BEST MATCH':'ALTERNATIVE'}</span><div className="route-time">{fmt(route.total)}</div><div className="route-meta">{route.transfers} transfer{route.transfers===1?'':'s'} · ~{route.walk} min walking · schedule-based</div></div>{best&&<span className="recommended">Recommended</span>}</div><div className="legs">{route.legs.map((l,i)=><div className={`leg ${l.type}`} key={i}><div className="leg-title">{l.label}{l.route&&l.route!=='Metro'&&<small> · {l.route}</small>}</div><div className="leg-line">{l.from}</div><div className="leg-time">↓ {fmt(l.mins)}</div><div className="leg-line">{l.to}</div></div>)}</div></article>}
+
+function Field({label,value,onChange,placeholder,action,gpsBtnLabel}){
+  return (
+    <label className="field">
+      <span>{label}</span>
+      <div>
+        <input value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder}/>
+        {action&&<button className="gps" onClick={action} title="Use current location">{gpsBtnLabel||'◎ GPS'}</button>}
+      </div>
+    </label>
+  );
+}
+
+function RouteCard({route,best,lang,stopMap}){
+  const T=(key,...args)=>t(lang,key,...args);
+  const SN=(name)=>stopName(stopMap,lang,name);
+  return (
+    <article className={'route '+(best?'best':'')}>
+      <div className="route-top">
+        <div>
+          <span className="route-badge">{best?T('badgeBest'):T('badgeAlt')}</span>
+          <div className="route-time">{fmtDuration(lang,route.total)}</div>
+          <div className="route-meta">
+            {route.transfers} {route.transfers===1?T('transfers'):T('transfersPlural')} · ~{route.walk} {T('walkingMin')} · {T('scheduleBased')}
+          </div>
+        </div>
+        {best&&<span className="recommended">{T('recommended')}</span>}
+      </div>
+      <div className="legs">
+        {route.legs.map((l,i)=>(
+          <div className={`leg ${l.type}`} key={i}>
+            <div className="leg-title">{legLabel(lang,l.typeKey)}{l.route&&l.typeKey!=='metro'&&<small> · {l.route}</small>}</div>
+            <div className="leg-line">{SN(l.from)}</div>
+            <div className="leg-time">↓ {fmtDuration(lang,l.mins)}</div>
+            <div className="leg-line">{SN(l.to)}</div>
+          </div>
+        ))}
+      </div>
+    </article>
+  );
+}
+
 function Stat({n,t}){return <div className="stat"><b>{n}</b><span>{t}</span></div>}
 
 createRoot(document.getElementById('root')).render(<App/>);
